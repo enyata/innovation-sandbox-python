@@ -5,7 +5,7 @@ import requests
 import base64
 from datetime import datetime
 import hashlib
-import Nibss.crypt as crypting
+import nibss.crypt as crypting
 
 
 

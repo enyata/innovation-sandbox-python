@@ -1,5 +1,5 @@
 import unittest
-import Nibss.request as RS
+import nibss.request as RS
 
 
 class MyTestCase(unittest.TestCase):
