@@ -1,0 +1,2 @@
+from Crypto_Py.cryptopy import CryptoPy
+name = "Crypto-Py"
