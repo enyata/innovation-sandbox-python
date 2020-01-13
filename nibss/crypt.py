@@ -41,7 +41,7 @@ class Crypt:
                 raise ValueError(value_error)
 
 
-e = Crypt().encrypt("12345678901", '9+CZaWqfyI/fwezX', "eRpKTBjdOq6T67D0")
-print(e)
-d = Crypt().decrypt("4C3A8O9wyPmHP76qxvjkFV7cMBIpQEwPM7PW940vRE1i9E6oVbiY1WZKVTq8n21KVNlNo6U3uHF3EyuwgwiKbNejTQlx/os7E3Wa7gsf7vpT6ZRQUpgLptDu5IO2oUUW8sSgj0DqN0ip8ngUzRqs8IC64xCShT9Zg18nO4yC4y4=", b"9+CZaWqfyI/fwezX", b"eRpKTBjdOq6T67D0" )
-print(d)
+# e = Crypt().encrypt("12345678901", '9+CZaWqfyI/fwezX', "eRpKTBjdOq6T67D0")
+# print(e)
+# d = Crypt().decrypt("4C3A8O9wyPmHP76qxvjkFV7cMBIpQEwPM7PW940vRE1i9E6oVbiY1WZKVTq8n21KVNlNo6U3uHF3EyuwgwiKbNejTQlx/os7E3Wa7gsf7vpT6ZRQUpgLptDu5IO2oUUW8sSgj0DqN0ip8ngUzRqs8IC64xCShT9Zg18nO4yC4y4=", b"9+CZaWqfyI/fwezX", b"eRpKTBjdOq6T67D0" )
+# print(d)

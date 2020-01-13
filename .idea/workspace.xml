@@ -13,7 +13,12 @@
 >>>>>>> initial commit
 =======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
 >>>>>>> made changes
+=======
+      <change beforePath="$PROJECT_DIR$/nibss/crypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/nibss/crypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nibss/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/nibss/request.py" afterDir="false" />
+>>>>>>> consumed all endpoints
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +53,7 @@
       <recent name="$PROJECT_DIR$/Reset" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.crypt">
+  <component name="RunManager" selected="Python.request (1)">
     <configuration name="crypt" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="fsi-module" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -70,7 +75,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="encrypt" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="request (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="fsi-module" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -78,11 +83,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Encrypt" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nibss" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Encrypt/encrypt.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nibss/request.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -149,18 +154,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.crypt" />
-      <item itemvalue="Python.encrypt" />
       <item itemvalue="Python.request" />
       <item itemvalue="Python.reset" />
       <item itemvalue="Python tests.Unittests in test_reset.py" />
+      <item itemvalue="Python.request (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.request (1)" />
         <item itemvalue="Python.crypt" />
         <item itemvalue="Python.request" />
         <item itemvalue="Python.reset" />
         <item itemvalue="Python tests.Unittests in test_reset.py" />
-        <item itemvalue="Python.encrypt" />
       </list>
     </recent_temporary>
   </component>
@@ -199,6 +204,7 @@
     </state>
     <state x="100" y="127" width="1166" height="541" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.27.1366.741@0.27.1366.741" timestamp="1578903349721" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <state width="1343" height="161" key="GridCell.Tab.0.bottom" timestamp="1578944534155">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -217,30 +223,40 @@
     <state width="1343" height="161" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1578944534155" />
     <state x="172" y="32" width="1022" height="732" key="SettingsEditor" timestamp="1578914975401">
 =======
+=======
+    <state x="377" y="202" width="601" height="393" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578958037926">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="377" y="202" width="601" height="393" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.741@0.27.1366.741" timestamp="1578958037926" />
+>>>>>>> consumed all endpoints
     <state x="456" y="158" width="424" height="486" key="FileChooserDialogImpl" timestamp="1578948792560">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="456" y="158" width="424" height="486" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1578948792560" />
-    <state width="1343" height="161" key="GridCell.Tab.0.bottom" timestamp="1578948858847">
+    <state width="1343" height="161" key="GridCell.Tab.0.bottom" timestamp="1578957201120">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="161" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1578948858847" />
-    <state width="1343" height="161" key="GridCell.Tab.0.center" timestamp="1578948858846">
+    <state width="1343" height="161" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1578957201120" />
+    <state width="1343" height="161" key="GridCell.Tab.0.center" timestamp="1578957201119">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="161" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1578948858846" />
-    <state width="1343" height="161" key="GridCell.Tab.0.left" timestamp="1578948858846">
+    <state width="1343" height="161" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1578957201119" />
+    <state width="1343" height="161" key="GridCell.Tab.0.left" timestamp="1578957201119">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="161" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1578948858846" />
-    <state width="1343" height="161" key="GridCell.Tab.0.right" timestamp="1578948858846">
+    <state width="1343" height="161" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1578957201119" />
+    <state width="1343" height="161" key="GridCell.Tab.0.right" timestamp="1578957201120">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="161" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1578948858846" />
+    <state width="1343" height="161" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1578957201120" />
     <state x="172" y="32" width="1022" height="732" key="SettingsEditor" timestamp="1578948830626">
 >>>>>>> made changes
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="172" y="32" width="1022" height="732" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1578948830626" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1578955963367">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1578955963367" />
   </component>
 </project>
