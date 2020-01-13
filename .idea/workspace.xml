@@ -35,7 +35,7 @@
       <recent name="$PROJECT_DIR$/Reset" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.crypto">
+  <component name="RunManager" selected="Python.crypt">
     <configuration name="crypt" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="fsi-module" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -136,7 +136,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.crypto" />
         <item itemvalue="Python.request" />
         <item itemvalue="Python.reset" />
         <item itemvalue="Python tests.Unittests in test_reset.py" />
