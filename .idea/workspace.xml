@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f2b980e-8e06-4d60-9ac1-64ac417e2a9c" name="Default Changelist" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/Nibss/crypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/Nibss/crypt.py" afterDir="false" />
 =======
       <change beforePath="$PROJECT_DIR$/Nibss/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/nibss/__init__.py" afterDir="false" />
@@ -10,6 +11,9 @@
       <change beforePath="$PROJECT_DIR$/Nibss/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/nibss/request.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nibss/test_reset.py" beforeDir="false" afterPath="$PROJECT_DIR$/nibss/test_reset.py" afterDir="false" />
 >>>>>>> initial commit
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> made changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +40,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -53,11 +57,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Nibss" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nibss" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Nibss/crypt.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nibss/crypt.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -143,6 +147,13 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.crypt" />
+      <item itemvalue="Python.encrypt" />
+      <item itemvalue="Python.request" />
+      <item itemvalue="Python.reset" />
+      <item itemvalue="Python tests.Unittests in test_reset.py" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.crypt" />
@@ -179,10 +190,15 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="141" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578948856519">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="141" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1578948856519" />
     <state x="100" y="127" width="1166" height="541" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1578903349721">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="100" y="127" width="1166" height="541" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.27.1366.741@0.27.1366.741" timestamp="1578903349721" />
+<<<<<<< HEAD
     <state width="1343" height="161" key="GridCell.Tab.0.bottom" timestamp="1578944534155">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -200,8 +216,31 @@
     </state>
     <state width="1343" height="161" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1578944534155" />
     <state x="172" y="32" width="1022" height="732" key="SettingsEditor" timestamp="1578914975401">
+=======
+    <state x="456" y="158" width="424" height="486" key="FileChooserDialogImpl" timestamp="1578948792560">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="172" y="32" width="1022" height="732" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1578914975401" />
+    <state x="456" y="158" width="424" height="486" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1578948792560" />
+    <state width="1343" height="161" key="GridCell.Tab.0.bottom" timestamp="1578948858847">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1343" height="161" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1578948858847" />
+    <state width="1343" height="161" key="GridCell.Tab.0.center" timestamp="1578948858846">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1343" height="161" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1578948858846" />
+    <state width="1343" height="161" key="GridCell.Tab.0.left" timestamp="1578948858846">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1343" height="161" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1578948858846" />
+    <state width="1343" height="161" key="GridCell.Tab.0.right" timestamp="1578948858846">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1343" height="161" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1578948858846" />
+    <state x="172" y="32" width="1022" height="732" key="SettingsEditor" timestamp="1578948830626">
+>>>>>>> made changes
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="172" y="32" width="1022" height="732" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1578948830626" />
   </component>
 </project>

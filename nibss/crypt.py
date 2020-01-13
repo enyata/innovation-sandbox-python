@@ -1,6 +1,5 @@
 from Crypto.Cipher import AES
 from base64 import b64encode, b64decode
-from Crypto.Random import get_random_bytes
 from Crypto.Util.Padding import pad, unpad
 
 
@@ -11,7 +10,7 @@ class Crypt:
         self.enc_dec_method = 'utf-8'
 
     def encrypt(self, str_to_enc, key, iv):
-        # enc_key = md5(key.encode('utf8')).digest()
+
         try:
             aes_obj = AES.new(key.encode(self.enc_dec_method), AES.MODE_CBC, iv.encode(self.enc_dec_method))
             hx_enc = aes_obj.encrypt(pad(str_to_enc.encode(self.enc_dec_method), 128))
@@ -20,7 +19,7 @@ class Crypt:
             return mret
         except ValueError as value_error:
             if value_error.args[0] == 'IV must be 16 bytes long':
-                raise ValueError('Encryption Error: SALT must be 16 characters long')
+                raise ValueError('Encryption Error: IV key must be 16 characters long')
             elif value_error.args[0] == 'AES key must be either 16, 24, or 32 bytes long':
                 raise ValueError('Encryption Error: Encryption key must be either 16, 24, or 32 characters long')
             else:
@@ -35,7 +34,7 @@ class Crypt:
             return out
         except ValueError as value_error:
             if value_error.args[0] == 'IV must be 16 bytes long':
-                raise ValueError('Decryption Error: SALT must be 16 characters long')
+                raise ValueError('Decryption Error: IV key must be 16 characters long')
             elif value_error.args[0] == 'AES key must be either 16, 24, or 32 bytes long':
                 raise ValueError('Decryption Error: Encryption key must be either 16, 24, or 32 characters long')
             else:
