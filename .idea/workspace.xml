@@ -136,6 +136,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.crypt" />
         <item itemvalue="Python.request" />
         <item itemvalue="Python.reset" />
         <item itemvalue="Python tests.Unittests in test_reset.py" />
@@ -173,22 +174,22 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="100" y="127" width="1166" height="541" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.27.1366.741@0.27.1366.741" timestamp="1578903349721" />
-    <state width="1343" height="161" key="GridCell.Tab.0.bottom" timestamp="1578932992487">
+    <state width="1343" height="161" key="GridCell.Tab.0.bottom" timestamp="1578935944101">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="161" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1578932992487" />
-    <state width="1343" height="161" key="GridCell.Tab.0.center" timestamp="1578932992487">
+    <state width="1343" height="161" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1578935944101" />
+    <state width="1343" height="161" key="GridCell.Tab.0.center" timestamp="1578935944101">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="161" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1578932992487" />
-    <state width="1343" height="161" key="GridCell.Tab.0.left" timestamp="1578932992487">
+    <state width="1343" height="161" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1578935944101" />
+    <state width="1343" height="161" key="GridCell.Tab.0.left" timestamp="1578935944101">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="161" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1578932992487" />
-    <state width="1343" height="161" key="GridCell.Tab.0.right" timestamp="1578932992487">
+    <state width="1343" height="161" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1578935944101" />
+    <state width="1343" height="161" key="GridCell.Tab.0.right" timestamp="1578935944101">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="161" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1578932992487" />
+    <state width="1343" height="161" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1578935944101" />
     <state x="172" y="32" width="1022" height="732" key="SettingsEditor" timestamp="1578914975401">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
