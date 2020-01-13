@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f2b980e-8e06-4d60-9ac1-64ac417e2a9c" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/Nibss/crypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/Nibss/crypt.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Nibss/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/nibss/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nibss/crypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/nibss/crypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nibss/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/nibss/request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nibss/test_reset.py" beforeDir="false" afterPath="$PROJECT_DIR$/nibss/test_reset.py" afterDir="false" />
+>>>>>>> initial commit
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,12 +134,12 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Nibss" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nibss" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Nibss/test_reset.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/nibss/test_reset.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
