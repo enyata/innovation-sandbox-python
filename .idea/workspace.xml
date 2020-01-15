@@ -18,7 +18,11 @@
 =======
       <change beforePath="$PROJECT_DIR$/nibss/crypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/nibss/crypt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nibss/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/nibss/request.py" afterDir="false" />
+<<<<<<< HEAD
 >>>>>>> consumed all endpoints
+=======
+      <change beforePath="$PROJECT_DIR$/nibss/test_reset.py" beforeDir="false" afterPath="$PROJECT_DIR$/nibss/test_request.py" afterDir="false" />
+>>>>>>> all tests written
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,92 +57,8 @@
       <recent name="$PROJECT_DIR$/Reset" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.request (1)">
-    <configuration name="crypt" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="fsi-module" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nibss" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nibss/crypt.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="request (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="fsi-module" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nibss" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nibss/request.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="request" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="fsi-module" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Nibss" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Nibss/request.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="reset" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="fsi-module" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Reset" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Reset/reset.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests in test_reset.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittests for test_request.MyTestCase.test_get_params">
+    <configuration name="Unittests for test_request.MyTestCase" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="fsi-module" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -148,24 +68,80 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/nibss/test_reset.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;test_request.MyTestCase&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_request.MyTestCase.test_get_params" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="fsi-module" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nibss" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_request.MyTestCase.test_get_params&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_request.MyTestCase.test_reset" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="fsi-module" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nibss" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_request.MyTestCase.test_reset&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_request.MyTestCase.test_single_bvn" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="fsi-module" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nibss" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_request.MyTestCase.test_single_bvn&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_request.MyTestCase.test_validate_records" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="fsi-module" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nibss" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_request.MyTestCase.test_validate_records&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.crypt" />
-      <item itemvalue="Python.request" />
-      <item itemvalue="Python.reset" />
-      <item itemvalue="Python tests.Unittests in test_reset.py" />
-      <item itemvalue="Python.request (1)" />
+      <item itemvalue="Python tests.Unittests for test_request.MyTestCase.test_validate_records" />
+      <item itemvalue="Python tests.Unittests for test_request.MyTestCase" />
+      <item itemvalue="Python tests.Unittests for test_request.MyTestCase.test_single_bvn" />
+      <item itemvalue="Python tests.Unittests for test_request.MyTestCase.test_reset" />
+      <item itemvalue="Python tests.Unittests for test_request.MyTestCase.test_get_params" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.request (1)" />
-        <item itemvalue="Python.crypt" />
-        <item itemvalue="Python.request" />
-        <item itemvalue="Python.reset" />
-        <item itemvalue="Python tests.Unittests in test_reset.py" />
+        <item itemvalue="Python tests.Unittests for test_request.MyTestCase.test_get_params" />
+        <item itemvalue="Python tests.Unittests for test_request.MyTestCase.test_reset" />
+        <item itemvalue="Python tests.Unittests for test_request.MyTestCase.test_single_bvn" />
+        <item itemvalue="Python tests.Unittests for test_request.MyTestCase" />
+        <item itemvalue="Python tests.Unittests for test_request.MyTestCase.test_validate_records" />
       </list>
     </recent_temporary>
   </component>
@@ -199,9 +175,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="141" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1578948856519" />
-    <state x="100" y="127" width="1166" height="541" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1578903349721">
+    <state x="100" y="127" width="1166" height="541" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1579084049686">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
+<<<<<<< HEAD
     <state x="100" y="127" width="1166" height="541" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.27.1366.741@0.27.1366.741" timestamp="1578903349721" />
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -224,6 +201,9 @@
     <state x="172" y="32" width="1022" height="732" key="SettingsEditor" timestamp="1578914975401">
 =======
 =======
+=======
+    <state x="100" y="127" width="1166" height="541" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.27.1366.741@0.27.1366.741" timestamp="1579084049686" />
+>>>>>>> all tests written
     <state x="377" y="202" width="601" height="393" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578958037926">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -233,27 +213,35 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="456" y="158" width="424" height="486" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1578948792560" />
-    <state width="1343" height="161" key="GridCell.Tab.0.bottom" timestamp="1578957201120">
+    <state width="1366" height="257" key="GridCell.Tab.0.bottom" timestamp="1579088610547">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="161" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1578957201120" />
-    <state width="1343" height="161" key="GridCell.Tab.0.center" timestamp="1578957201119">
+    <state width="1366" height="257" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1579088610547" />
+    <state width="1366" height="257" key="GridCell.Tab.0.center" timestamp="1579088610546">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="161" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1578957201119" />
-    <state width="1343" height="161" key="GridCell.Tab.0.left" timestamp="1578957201119">
+    <state width="1366" height="257" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1579088610546" />
+    <state width="1366" height="257" key="GridCell.Tab.0.left" timestamp="1579088610544">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="161" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1578957201119" />
-    <state width="1343" height="161" key="GridCell.Tab.0.right" timestamp="1578957201120">
+    <state width="1366" height="257" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1579088610544" />
+    <state width="1366" height="257" key="GridCell.Tab.0.right" timestamp="1579088610546">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="161" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1578957201120" />
+    <state width="1366" height="257" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1579088610546" />
     <state x="172" y="32" width="1022" height="732" key="SettingsEditor" timestamp="1578948830626">
 >>>>>>> made changes
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="172" y="32" width="1022" height="732" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1578948830626" />
+    <state x="343" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1579056246714">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="343" y="225" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1579056246714" />
+    <state x="333" y="27" width="690" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579001638124">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="333" y="27" width="690" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1366.741@0.27.1366.741" timestamp="1579001638124" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1578955963367">
       <screen x="0" y="27" width="1366" height="741" />
     </state>

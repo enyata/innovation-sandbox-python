@@ -1,226 +1,217 @@
-import sys
-
-import requests
-import requests
-from base64 import b64encode
 import base64
-from datetime import datetime
 import hashlib
+import sys
+import arrow
+import requests
 import nibss.crypt as crypting
+import nibss.url as url
 
-
-
-
-root_url = 'https://innovation-sandbox-backend.herokuapp.com/nibss/'
-
+root_url = str(url.url())
 
 class Request:
-
-    def __init__(self, code, key, content_type, accept, username, password):
-        self.code = str(base64.b64encode(code.encode("utf-8")))
-        self.key = key
-        self.username = username
-        self.password = password
-        self.content_type = content_type
-        self.accept = accept
+    def __init__(self, util_dict):
+        self.util_dict = util_dict
+        self.key = self.util_dict["sandbox-key"]
+        self.content_type = self.util_dict["content-type"]
+        self.accept = self.util_dict["accept"]
+        self.code = (base64.b64encode(self.util_dict["Organizationcode"].encode("utf-8"))).decode('utf8')
         self.sign_meth = 'SHA256'
+        auth_string = self.util_dict["username"] + ':' + self.util_dict["password"]
+        self.auth_header = (base64.b64encode(auth_string.encode("utf-8"))).decode('utf8')
+        datenow = arrow.now().format('YYYY-MM-DD').split('-')
+        date = ''.join(datenow)
+        signature_string = self.util_dict["username"] + str(date) + self.util_dict["password"]
+        self.sign_header = hashlib.sha256(signature_string.encode('utf-8')).hexdigest()
 
-        auth_string = self.username + ':' + self.password
-        self.auth_header = str(base64.b64encode(auth_string.encode("utf-8")))
-        date = datetime.today().strftime('YYYYMMDD')
-        signature_string = self.username + date + self.password
-        self.sign_header = hashlib.sha256(signature_string.encode()).hexdigest()
+    def get_params(self):
+        return self.util_dict
 
     # a function to reset sandbox credentials
     def bvn_reset(self):
-        headers = {"OrganisationCode": self.code,
-                   "Sandbox-Key": self.key}
-
+        headers = {
+            "OrganisationCode": self.code,
+            "Sandbox-Key": self.key
+        }
         response = requests.post(url=root_url + "bvnr/Reset", headers=headers)
-        print(response)
 
         def callback(r):
-
             if r.status_code == 200:
-                # print(r.headers)
                 data = {
-                    "aes_key": r.headers.Aes_key,
-                    "password": r.headers.Password,
-                    "ivkey": r.headers.Ivkey
+                    "aes_key": r.headers['Aes_key'],
+                    "password": r.headers['Password'],
+                    "ivkey": r.headers['Ivkey']
                 }
-
             elif r.status_code == 500:
                 data = "server error"
-
             else:
                 data = "error"
 
-            print(data)
             return data
 
-        callback(response)
+        t = callback(response)
+        return t
 
     # verify single bvn
-    def verify_single(self, bvn, aes_key, iv_key):
-
+    def verify_single(self, body, aes_key, iv_key):
         headers = {
-            # YOUR_ORGANIZATION_CODE_IN_BASE_64
             "OrganisationCode": self.code,
-            # YOUR_SANDBOX_KEY
             "Sandbox-Key": self.key,
             "Authorization": self.auth_header,
             "SIGNATURE": self.sign_header,
             "SIGNATURE_METH": self.sign_meth,
             "Content-Type": self.content_type,
-            "Accept": self.content_type
+            "Accept": self.accept
+        }
+        encrypted = crypting.Crypt().encrypt(body, aes_key, iv_key)
 
-        }
-        # if self.content_type == 'application/json':
-        #     headers
-
-        text = {
-            "BVN": bvn
-        }
-        encrypted = crypting.Crypt().encrypt(text["BVN"], aes_key, iv_key)
-        body = {
-            encrypted
-        }
         try:
             r = requests.post(url=root_url + "bvnr/VerifySingleBVN", headers=headers, data=encrypted)
-            # decrypted = crypting.Crypt().decrypt(r, aes_key, iv_key)
-            print(r.text)
-            return r
+            decrypted = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
+            message = decrypted
         except requests.exceptions.RequestException as e:
             print(e)
+            message = e
             sys.exit(1)
+
+        return message
 
     # verify multiple bvn
     def verify_multiple(self, bvns, aes_key, iv_key):
-
         headers = {
-            # YOUR_ORGANIZATION_CODE_IN_BASE_64
             "OrganisationCode": self.code,
-            # YOUR_SANDBOX_KEY
             "Sandbox-Key": self.key,
             "Authorization": self.auth_header,
             "SIGNATURE": self.sign_header,
             "SIGNATURE_METH": self.sign_meth,
             "Content-Type": self.content_type,
-            "Accept": self.content_type
+            "Accept": self.accept
+        }
+        body = bvns
+        encrypted = crypting.Crypt().encrypt(body, aes_key, iv_key)
 
-        }
-        text = {
-            "BVNS": bvns
-        }
-        encrypted = crypting.Crypt().encrypt(text, aes_key, iv_key)
-        body = {
-            encrypted
-        }
         try:
             r = requests.post(url=root_url + "bvnr/VerifyMultipleBVN", headers=headers, data=encrypted)
-            decrypted = crypting.Crypt().decrypt(r, aes_key, iv_key)
-            return decrypted
+            decrypted = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
+            message =  decrypted
         except requests.exceptions.RequestException as e:
             print(e)
+            message = e
             sys.exit(1)
+        return message
 
-# Request("11111", "8dc1337c1ac82aa90f3bd7b8de8d882a", "application/json", "application/json", "info@enyata.com", "8dco'65T").\
-#     verify_single("12345678901", '9+CZaWqfyI/fwezX', "eRpKTBjdOq6T67D0")
-
-    # watchlisted bvn
-    def bvn_watchlisted(self, bvn, aes_key, iv_key):
-
+    def bvn_watchlisted(self, body, aes_key, iv_key):
         headers = {
-            # YOUR_ORGANIZATION_CODE_IN_BASE_64
             "OrganisationCode": self.code,
-            # YOUR_SANDBOX_KEY
             "Sandbox-Key": self.key,
             "Authorization": self.auth_header,
             "SIGNATURE": self.sign_header,
             "SIGNATURE_METH": self.sign_meth,
             "Content-Type": self.content_type,
             "Accept": self.content_type
+        }
+        encrypted = crypting.Crypt().encrypt(body, aes_key, iv_key)
 
-        }
-        text = {
-            "BVNS": bvn
-        }
-        encrypted = crypting.Crypt().encrypt(text["BVNS"], aes_key, iv_key)
-        body = {
-            encrypted
-        }
         try:
             r = requests.post(url=root_url + "bvnr/IsBVNWatchlisted", headers=headers, data=encrypted)
-            decrypted = crypting.Crypt().decrypt(r, aes_key, iv_key)
-            return decrypted
+            decrypted = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
+            message = decrypted
         except requests.exceptions.RequestException as e:
             print(e)
+            message = e
             sys.exit(1)
+        return message
 
     # resetting bvn placeholder
     def bvn_placeholder_reset(self):
-
-        headers = {"OrganisationCode": self.code,
-                   "Sandbox-Key": self.key}
+        headers = {
+            "OrganisationCode": self.code,
+            "Sandbox-Key": self.key
+        }
 
         response = requests.post(url=root_url + "BVNPlaceHolder/Reset", headers=headers)
-        print(response)
 
         def placeholder_callback(r):
-
             if r.status_code == 200:
-                # print(r.headers)
                 data = {
-                    "aes_key": r.headers.Aes_key,
-                    "password": r.headers.Password,
-                    "ivkey": r.headers.Ivkey
+                    "aes_key": r.headers['Aes_key'],
+                    "password": r.headers['Password'],
+                    "ivkey": r.headers['Ivkey']
                 }
-
             elif r.status_code == 500:
                 data = "server error"
-
             else:
                 data = "error"
-
-            print(data)
             return data
 
-        placeholder_callback(response)
+        t = placeholder_callback(response)
+        return t
 
-    # finger print verification
-    def verify_fingerprint(self, bvn, device_id, reference, finger_type, finger_position, nist, value, aes_key, iv_key):
-
+    # validate record
+    def validate_record(self, body, aes_key, iv_key):
         headers = {
-            # YOUR_ORGANIZATION_CODE_IN_BASE_64
             "OrganisationCode": self.code,
-            # YOUR_SANDBOX_KEY
             "Sandbox-Key": self.key,
             "Authorization": self.auth_header,
             "SIGNATURE": self.sign_header,
             "SIGNATURE_METH": self.sign_meth,
             "Content-Type": self.content_type,
             "Accept": self.content_type
-
         }
+        encrypted = crypting.Crypt().encrypt(body, aes_key, iv_key)
 
-        text =  {
-          "BVN": bvn,
-          "DeviceId": device_id,
-          "ReferenceNumber": reference,
-          "FingerImage": {
-            "type": finger_type,
-            "position": finger_position,
-            "nist_impression_type": nist,
-            "value": value
-          }
-        }
-
-        encrypted = crypting.Crypt().encrypt(text, aes_key, iv_key)
         try:
-            r = requests.post(url=root_url + "bvnr/VerifyFingerPrint", headers=headers, data=encrypted)
-            decrypted = crypting.Crypt().decrypt(r, aes_key, iv_key)
-            return decrypted
+            r = requests.post(url=root_url + "BVNPlaceHolder/ValidateRecord", headers=headers, data=encrypted)
+            decrypted = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
+            message = decrypted
         except requests.exceptions.RequestException as e:
             print(e)
+            message = e
             sys.exit(1)
+        return message
 
+    # validate records
+    def validate_records(self, body, aes_key, iv_key):
+        headers = {
+            "OrganisationCode": self.code,
+            "Sandbox-Key": self.key,
+            "Authorization": self.auth_header,
+            "SIGNATURE": self.sign_header,
+            "SIGNATURE_METH": self.sign_meth,
+            "Content-Type": self.content_type,
+            "Accept": self.content_type
+        }
+        encrypted = crypting.Crypt().encrypt(body, aes_key, iv_key)
+
+        try:
+            r = requests.post(url=root_url + "BVNPlaceHolder/ValidateRecords", headers=headers, data=encrypted)
+            decrypted = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
+            message = decrypted
+        except requests.exceptions.RequestException as e:
+            print(e)
+            message = e
+            sys.exit(1)
+        return message
+
+    # finger print verification
+    def verify_fingerprint(self, body, aes_key, iv_key):
+        headers = {
+            "OrganisationCode": self.code,
+            "Sandbox-Key": self.key,
+            "Authorization": self.auth_header,
+            "SIGNATURE": self.sign_header,
+            "SIGNATURE_METH": self.sign_meth,
+            "Content-Type": self.content_type,
+            "Accept": self.accept
+        }
+        encrypted = crypting.Crypt().encrypt(body, aes_key, iv_key)
+
+        try:
+            r = requests.post(url=root_url + "fp/VerifyFingerPrint", headers=headers, data=encrypted)
+            decrypted = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
+            print(decrypted)
+            message = decrypted
+        except requests.exceptions.RequestException as e:
+            print(e)
+            message = e
+            sys.exit(1)
+        return message

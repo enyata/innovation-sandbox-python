@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 
+=======
+.idea
+>>>>>>> all tests written
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
