@@ -14,6 +14,7 @@
 =======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> made changes
 =======
       <change beforePath="$PROJECT_DIR$/nibss/crypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/nibss/crypt.py" afterDir="false" />
@@ -23,6 +24,10 @@
 =======
       <change beforePath="$PROJECT_DIR$/nibss/test_reset.py" beforeDir="false" afterPath="$PROJECT_DIR$/nibss/test_request.py" afterDir="false" />
 >>>>>>> all tests written
+=======
+      <change beforePath="$PROJECT_DIR$/nibss/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/nibss/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nibss/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/nibss/request.py" afterDir="false" />
+>>>>>>> resolved issues
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +54,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -57,7 +62,7 @@
       <recent name="$PROJECT_DIR$/Reset" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test_request.MyTestCase.test_get_params">
+  <component name="RunManager" selected="Python tests.Unittests for test_request.MyTestCase">
     <configuration name="Unittests for test_request.MyTestCase" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="fsi-module" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -83,6 +88,20 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_request.MyTestCase.test_get_params&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_request.MyTestCase.test_placeholder_reset" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="fsi-module" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nibss" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_request.MyTestCase.test_placeholder_reset&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -114,34 +133,20 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_request.MyTestCase.test_validate_records" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="fsi-module" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nibss" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_request.MyTestCase.test_validate_records&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests for test_request.MyTestCase.test_validate_records" />
       <item itemvalue="Python tests.Unittests for test_request.MyTestCase" />
       <item itemvalue="Python tests.Unittests for test_request.MyTestCase.test_single_bvn" />
       <item itemvalue="Python tests.Unittests for test_request.MyTestCase.test_reset" />
       <item itemvalue="Python tests.Unittests for test_request.MyTestCase.test_get_params" />
+      <item itemvalue="Python tests.Unittests for test_request.MyTestCase.test_placeholder_reset" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for test_request.MyTestCase.test_get_params" />
+        <item itemvalue="Python tests.Unittests for test_request.MyTestCase" />
         <item itemvalue="Python tests.Unittests for test_request.MyTestCase.test_reset" />
         <item itemvalue="Python tests.Unittests for test_request.MyTestCase.test_single_bvn" />
-        <item itemvalue="Python tests.Unittests for test_request.MyTestCase" />
-        <item itemvalue="Python tests.Unittests for test_request.MyTestCase.test_validate_records" />
+        <item itemvalue="Python tests.Unittests for test_request.MyTestCase.test_get_params" />
+        <item itemvalue="Python tests.Unittests for test_request.MyTestCase.test_placeholder_reset" />
       </list>
     </recent_temporary>
   </component>
@@ -213,22 +218,22 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="456" y="158" width="424" height="486" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1578948792560" />
-    <state width="1366" height="257" key="GridCell.Tab.0.bottom" timestamp="1579088610547">
+    <state width="1343" height="238" key="GridCell.Tab.0.bottom" timestamp="1579176419413">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1366" height="257" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1579088610547" />
-    <state width="1366" height="257" key="GridCell.Tab.0.center" timestamp="1579088610546">
+    <state width="1343" height="238" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1579176419413" />
+    <state width="1343" height="238" key="GridCell.Tab.0.center" timestamp="1579176419413">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1366" height="257" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1579088610546" />
-    <state width="1366" height="257" key="GridCell.Tab.0.left" timestamp="1579088610544">
+    <state width="1343" height="238" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1579176419413" />
+    <state width="1343" height="238" key="GridCell.Tab.0.left" timestamp="1579176419413">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1366" height="257" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1579088610544" />
-    <state width="1366" height="257" key="GridCell.Tab.0.right" timestamp="1579088610546">
+    <state width="1343" height="238" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1579176419413" />
+    <state width="1343" height="238" key="GridCell.Tab.0.right" timestamp="1579176419413">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1366" height="257" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1579088610546" />
+    <state width="1343" height="238" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1579176419413" />
     <state x="172" y="32" width="1022" height="732" key="SettingsEditor" timestamp="1578948830626">
 >>>>>>> made changes
       <screen x="0" y="27" width="1366" height="741" />

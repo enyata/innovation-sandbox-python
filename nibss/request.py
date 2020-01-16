@@ -26,7 +26,7 @@ class Request:
     def get_params(self):
         return self.util_dict
 
-    # a function to reset sandbox credentials
+        # a function to reset sandbox credentials
     def bvn_reset(self):
         headers = {
             "OrganisationCode": self.code,
@@ -43,9 +43,10 @@ class Request:
                 }
             elif r.status_code == 500:
                 data = "server error"
+            elif r.status_code == 403:
+                data = "Expired Sandbox Key"
             else:
                 data = "error"
-
             return data
 
         t = callback(response)
@@ -66,14 +67,18 @@ class Request:
 
         try:
             r = requests.post(url=root_url + "bvnr/VerifySingleBVN", headers=headers, data=encrypted)
-            decrypted = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
-            message = decrypted
+            if r.status_code == 200:
+                data = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
+            elif r.status_code == 500:
+                data = "server error"
+            elif r.status_code == 403:
+                data = "Expired Sandbox Key"
+            else:
+                data = "error"
+            return data
         except requests.exceptions.RequestException as e:
-            print(e)
-            message = e
+            return e
             sys.exit(1)
-
-        return message
 
     # verify multiple bvn
     def verify_multiple(self, bvns, aes_key, iv_key):
@@ -91,13 +96,18 @@ class Request:
 
         try:
             r = requests.post(url=root_url + "bvnr/VerifyMultipleBVN", headers=headers, data=encrypted)
-            decrypted = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
-            message =  decrypted
+            if r.status_code == 200:
+                data = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
+            elif r.status_code == 500:
+                data = "server error"
+            elif r.status_code == 403:
+                data = "Expired Sandbox Key"
+            else:
+                data = "error"
+            return data
         except requests.exceptions.RequestException as e:
-            print(e)
-            message = e
+            return e
             sys.exit(1)
-        return message
 
     def bvn_watchlisted(self, body, aes_key, iv_key):
         headers = {
@@ -113,13 +123,18 @@ class Request:
 
         try:
             r = requests.post(url=root_url + "bvnr/IsBVNWatchlisted", headers=headers, data=encrypted)
-            decrypted = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
-            message = decrypted
+            if r.status_code == 200:
+                data = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
+            elif r.status_code == 500:
+                data = "server error"
+            elif r.status_code == 403:
+                data = "Expired Sandbox Key"
+            else:
+                data = "error"
+            return data
         except requests.exceptions.RequestException as e:
-            print(e)
-            message = e
+            return e
             sys.exit(1)
-        return message
 
     # resetting bvn placeholder
     def bvn_placeholder_reset(self):
@@ -139,6 +154,8 @@ class Request:
                 }
             elif r.status_code == 500:
                 data = "server error"
+            elif r.status_code == 403:
+                data = "Expired Sandbox Key"
             else:
                 data = "error"
             return data
@@ -161,13 +178,18 @@ class Request:
 
         try:
             r = requests.post(url=root_url + "BVNPlaceHolder/ValidateRecord", headers=headers, data=encrypted)
-            decrypted = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
-            message = decrypted
+            if r.status_code == 200:
+                data = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
+            elif r.status_code == 500:
+                data = "server error"
+            elif r.status_code == 403:
+                data = "Expired Sandbox Key"
+            else:
+                data = "error"
+            return data
         except requests.exceptions.RequestException as e:
-            print(e)
-            message = e
+            return e
             sys.exit(1)
-        return message
 
     # validate records
     def validate_records(self, body, aes_key, iv_key):
@@ -184,13 +206,18 @@ class Request:
 
         try:
             r = requests.post(url=root_url + "BVNPlaceHolder/ValidateRecords", headers=headers, data=encrypted)
-            decrypted = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
-            message = decrypted
+            if r.status_code == 200:
+                data = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
+            elif r.status_code == 500:
+                data = "server error"
+            elif r.status_code == 403:
+                data = "Expired Sandbox Key"
+            else:
+                data = "error"
+            return data
         except requests.exceptions.RequestException as e:
-            print(e)
-            message = e
+            return e
             sys.exit(1)
-        return message
 
     # finger print verification
     def verify_fingerprint(self, body, aes_key, iv_key):
@@ -207,11 +234,15 @@ class Request:
 
         try:
             r = requests.post(url=root_url + "fp/VerifyFingerPrint", headers=headers, data=encrypted)
-            decrypted = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
-            print(decrypted)
-            message = decrypted
+            if r.status_code == 200:
+                data = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
+            elif r.status_code == 500:
+                data = "server error"
+            elif r.status_code == 403:
+                data = "Expired Sandbox Key"
+            else:
+                data = "error"
+            return data
         except requests.exceptions.RequestException as e:
-            print(e)
-            message = e
+            return e
             sys.exit(1)
-        return message
