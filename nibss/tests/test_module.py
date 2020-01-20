@@ -13,7 +13,7 @@ class MyTestCase(unittest.TestCase):
     def test_reset(self, mock_post):
         data = {'aes_key': '9+CZaWqfyI/fwezX', 'password': "^o'e6EXK5T ~^j2=", 'ivkey': 'eRpKTBjdOq6T67D0'}
         mock_post.return_value = R("")
-        self.assertEqual(b.bvn_reset(),
+        self.assertEqual(b.sandbox_reset(),
                          data,
                          "should return an object")
 
@@ -48,7 +48,7 @@ class MyTestCase(unittest.TestCase):
                  "RegistrationDate": "16-Sept-2014", "EnrollmentBank": "900", "EnrollmentBranch": "Ikorodu",
                  "WatchListed": "NO"}]}}
         mock_post.return_value = R(body["multiple_bvn"])
-        self.assertEqual(b.verify_multiple({"bvns":{"BVNS": "12345678901, 12345678902, 12345678903"}, "Aes_key":"9+CZaWqfyI/fwezX", "Iv_key":"eRpKTBjdOq6T67D0"}),
+        self.assertEqual(b.verify_multiple({"bvns":{"BVNS": "1234567890 1, 12345678902, 12345678903"}, "Aes_key":"9+CZaWqfyI/fwezX", "Iv_key":"eRpKTBjdOq6T67D0"}),
                          data,
                          "should return object")
 

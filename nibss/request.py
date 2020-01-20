@@ -27,9 +27,8 @@ class Request:
     def get_params(self):
         return self.util_dict
 
-        # a function to reset sandbox credentials
-
-    def bvn_reset(self):
+# a function to reset sandbox credentials
+    def sandbox_reset(self):
         headers = {
             "OrganisationCode": self.code,
             "Sandbox-Key": self.key
