@@ -9,6 +9,7 @@
 test_request.py
 
 .idea
+.vscode
 
 >>>>>>> added mock test
 # Byte-compiled / optimized / DLL files
