@@ -3,14 +3,19 @@ from unittest.mock import Mock, patch
 import nibss.request as RS
 from nibss.tests.common import body, R
 
-b = RS.Request({"url":"", "Organizationcode": "11111", "sandbox-key": "0ae0db703c04119b3db7a03d7f854c13", "content-type" :"application/json", "accept": "application/json", "username": "11111",
-               "password": "^o'e6EXK5T ~^j2="})
+b = RS.Request({"url": "", "Organizationcode": "11111", "sandbox-key": "0ae0db703c04119b3db7a03d7f854c13",
+                "content-type": "application/json", "accept": "application/json", "username": "11111",
+                "password": "^o'e6EXK5T ~^j2="})
+
+
 class MyTestCase(unittest.TestCase):
     @patch('nibss.request.requests.post')
     def test_reset(self, mock_post):
         data = {'aes_key': '9+CZaWqfyI/fwezX', 'password': "^o'e6EXK5T ~^j2=", 'ivkey': 'eRpKTBjdOq6T67D0'}
         mock_post.return_value = R("")
-        self.assertEqual(b.bvn_reset(), data, "should return an object")
+        self.assertEqual(b.bvn_reset(),
+                         data,
+                         "should return an object")
 
     @patch('nibss.request.requests.post')
     def test_verify_single(self, mock_post):
@@ -21,7 +26,8 @@ class MyTestCase(unittest.TestCase):
                      'RegistrationDate': '16-Nov-2014', 'EnrollmentBank': '900',
                      'EnrollmentBranch': 'Victoria Island', 'WatchListed': 'NO'}}
         mock_post.return_value = R(body["single_bvn"])
-        self.assertEqual(b.verify_single({"BVN": "12345678901"}, '9+CZaWqfyI/fwezX', "eRpKTBjdOq6T67D0"), data,
+        self.assertEqual(b.verify_single({"BVN": "12345678901"}, '9+CZaWqfyI/fwezX', "eRpKTBjdOq6T67D0"),
+                         data,
                          "should return object")
 
     @patch('nibss.request.requests.post')
@@ -43,7 +49,8 @@ class MyTestCase(unittest.TestCase):
                  "WatchListed": "NO"}]}}
         mock_post.return_value = R(body["multiple_bvn"])
         self.assertEqual(b.verify_multiple({"BVNS": "12345678901, 12345678902, 12345678903"}, "9+CZaWqfyI/fwezX",
-                                           "eRpKTBjdOq6T67D0"), data,
+                                           "eRpKTBjdOq6T67D0"),
+                         data,
                          "should return object")
 
     @patch('nibss.request.requests.post')
@@ -59,14 +66,17 @@ class MyTestCase(unittest.TestCase):
             }
         }
         mock_post.return_value = R(body["watchlist"])
-        self.assertEqual(b.bvn_watchlisted({"BVN": "12345678901"}, '9+CZaWqfyI/fwezX', "eRpKTBjdOq6T67D0"), output,
+        self.assertEqual(b.bvn_watchlisted({"BVN": "12345678901"}, '9+CZaWqfyI/fwezX', "eRpKTBjdOq6T67D0"),
+                         output,
                          "should return an object")
 
     @patch('nibss.request.requests.post')
     def test_placeholder_reset(self, mock_post):
         data = {'aes_key': '9+CZaWqfyI/fwezX', 'password': "^o'e6EXK5T ~^j2=", 'ivkey': 'eRpKTBjdOq6T67D0'}
         mock_post.return_value = R("")
-        self.assertEqual(b.bvn_placeholder_reset(), data, "should return an object")
+        self.assertEqual(b.bvn_placeholder_reset(),
+                         data,
+                         "should return an object")
 
     @patch('nibss.request.requests.post')
     def test_validate_record(self, mock_post):
@@ -90,7 +100,9 @@ class MyTestCase(unittest.TestCase):
             "MiddleName": "Adepoju",
             "AccountNumber": "0987654321",
             "BankCode": "011"
-        }, '9+CZaWqfyI/fwezX', "eRpKTBjdOq6T67D0"), response, "should return an object")
+        }, '9+CZaWqfyI/fwezX', "eRpKTBjdOq6T67D0"),
+            response,
+            "should return an object")
 
     @patch('nibss.request.requests.post')
     def test_validate_records(self, mock_post):
@@ -106,27 +118,28 @@ class MyTestCase(unittest.TestCase):
                     'AccountNumber': 'VALID',
                     'BankCode': 'VALID'},
                 {
-                    'ResponseCode': '00', 'BVN': 'VALID', 'FirstName': 'INVALID', 'LastName': 'VALID', 'MiddleName': 'INVALID', 'AccountNumber': 'VALID', 'BankCode': 'VALID'
+                    'ResponseCode': '00', 'BVN': 'VALID', 'FirstName': 'INVALID', 'LastName': 'VALID',
+                    'MiddleName': 'INVALID', 'AccountNumber': 'VALID', 'BankCode': 'VALID'
                 }]}}
         mock_post.return_value = R(body["records"])
         self.assertEqual(b.validate_records([
-       {
-        "BVN": "12345678901",
-        "FirstName": "Uchenna",
-        "LastName": "Okoro",
-        "MiddleName": "Adepoju",
-        "AccountNumber": "0987654321",
-        "BankCode": "011"
-      },
-      {
-        "BVN": "12345678912",
-        "FirstName": "Chidi",
-        "LastName": "Seun",
-        "MiddleName": "Joshua",
-        "AccountNumber": "0987654329",
-        "BankCode": "012"
-      }
-    ], "9+CZaWqfyI/fwezX", "eRpKTBjdOq6T67D0"), response, "should return an object")
+            {
+                "BVN": "12345678901",
+                "FirstName": "Uchenna",
+                "LastName": "Okoro",
+                "MiddleName": "Adepoju",
+                "AccountNumber": "0987654321",
+                "BankCode": "011"
+            },
+            {
+                "BVN": "12345678912",
+                "FirstName": "Chidi",
+                "LastName": "Seun",
+                "MiddleName": "Joshua",
+                "AccountNumber": "0987654329",
+                "BankCode": "012"
+            }
+        ], "9+CZaWqfyI/fwezX", "eRpKTBjdOq6T67D0"), response, "should return an object")
 
     @patch('nibss.request.requests.post')
     def test_verify_finger_print(self, mock_post):
@@ -149,7 +162,6 @@ class MyTestCase(unittest.TestCase):
                 "value": "c2RzZnNkZnNzZGY="
             }
         }, '9+CZaWqfyI/fwezX', "eRpKTBjdOq6T67D0"), response, "should return an object")
-
 
 
 if __name__ == '__main__':
