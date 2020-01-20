@@ -56,7 +56,7 @@ class Request:
         return t
 
     # verify single bvn
-    def verify_single(self, body, aes_key, iv_key):
+    def verify_single(self, data_dict):
         URL = urljoin(BASE_URL(self.url), "/nibss/bvnr/VerifySingleBVN")
         headers = {
             "OrganisationCode": self.code,
@@ -67,12 +67,13 @@ class Request:
             "Content-Type": self.content_type,
             "Accept": self.accept
         }
-        encrypted = crypting.Crypt().encrypt(body, aes_key, iv_key)
+        body = data_dict["body"]
+        encrypted = crypting.Crypt().encrypt(body, data_dict["Aes_key"], data_dict["Iv_key"])
 
         try:
             r = requests.post(url=URL, headers=headers, data=encrypted)
             if r.status_code == 200:
-                data = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
+                data = crypting.Crypt().decrypt(r.text, data_dict["Aes_key"], data_dict["Iv_key"])
             elif r.status_code == 500:
                 data = "server error"
             elif r.status_code == 403:
@@ -85,7 +86,7 @@ class Request:
             sys.exit(1)
 
     # verify multiple bvn
-    def verify_multiple(self, bvns, aes_key, iv_key):
+    def verify_multiple(self, data_dict):
         URL = urljoin(BASE_URL(self.url), "/nibss/bvnr/VerifyMultipleBVN")
         headers = {
             "OrganisationCode": self.code,
@@ -96,13 +97,13 @@ class Request:
             "Content-Type": self.content_type,
             "Accept": self.accept
         }
-        body = bvns
-        encrypted = crypting.Crypt().encrypt(body, aes_key, iv_key)
+        body = data_dict["bvns"]
+        encrypted = crypting.Crypt().encrypt(body, data_dict["Aes_key"], data_dict["Iv_key"])
 
         try:
             r = requests.post(url=URL, headers=headers, data=encrypted)
             if r.status_code == 200:
-                data = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
+                data = crypting.Crypt().decrypt(r.text, data_dict["Aes_key"], data_dict["Iv_key"])
             elif r.status_code == 500:
                 data = "server error"
             elif r.status_code == 403:
@@ -114,7 +115,7 @@ class Request:
             return e
             sys.exit(1)
 
-    def bvn_watchlisted(self, body, aes_key, iv_key):
+    def bvn_watchlisted(self, data_dict):
         URL = urljoin(BASE_URL(self.url), "/nibss/bvnr/IsBVNWatchlisted")
         headers = {
             "OrganisationCode": self.code,
@@ -125,12 +126,13 @@ class Request:
             "Content-Type": self.content_type,
             "Accept": self.content_type
         }
-        encrypted = crypting.Crypt().encrypt(body, aes_key, iv_key)
+        body = data_dict["body"]
+        encrypted = crypting.Crypt().encrypt(body, data_dict["Aes_key"], data_dict["Iv_key"])
 
         try:
             r = requests.post(url=URL, headers=headers, data=encrypted)
             if r.status_code == 200:
-                data = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
+                data = crypting.Crypt().decrypt(r.text, data_dict["Aes_key"], data_dict["Iv_key"])
             elif r.status_code == 500:
                 data = "server error"
             elif r.status_code == 403:
@@ -171,7 +173,7 @@ class Request:
         return t
 
     # validate record
-    def validate_record(self, body, aes_key, iv_key):
+    def validate_record(self, data_dict):
         URL = urljoin(BASE_URL(self.url), "/nibss/BVNPlaceHolder/ValidateRecord")
         headers = {
             "OrganisationCode": self.code,
@@ -182,12 +184,13 @@ class Request:
             "Content-Type": self.content_type,
             "Accept": self.content_type
         }
-        encrypted = crypting.Crypt().encrypt(body, aes_key, iv_key)
+        body = data_dict["body"]
+        encrypted = crypting.Crypt().encrypt(body, data_dict["Aes_key"], data_dict["Iv_key"])
 
         try:
             r = requests.post(url=URL, headers=headers, data=encrypted)
             if r.status_code == 200:
-                data = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
+                data = crypting.Crypt().decrypt(r.text, data_dict["Aes_key"], data_dict["Iv_key"])
             elif r.status_code == 500:
                 data = "server error"
             elif r.status_code == 403:
@@ -200,7 +203,7 @@ class Request:
             sys.exit(1)
 
     # validate records
-    def validate_records(self, body, aes_key, iv_key):
+    def validate_records(self, data_dict):
         URL = urljoin(BASE_URL(self.url), "/nibss/BVNPlaceHolder/ValidateRecords")
         headers = {
             "OrganisationCode": self.code,
@@ -211,12 +214,13 @@ class Request:
             "Content-Type": self.content_type,
             "Accept": self.content_type
         }
-        encrypted = crypting.Crypt().encrypt(body, aes_key, iv_key)
+        body = data_dict["body"]
+        encrypted = crypting.Crypt().encrypt(body, data_dict["Aes_key"], data_dict["Iv_key"])
 
         try:
             r = requests.post(url=URL, headers=headers, data=encrypted)
             if r.status_code == 200:
-                data = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
+                data = crypting.Crypt().decrypt(r.text, data_dict["Aes_key"], data_dict["Iv_key"])
             elif r.status_code == 500:
                 data = "server error"
             elif r.status_code == 403:
@@ -229,7 +233,7 @@ class Request:
             sys.exit(1)
 
     # finger print verification
-    def verify_fingerprint(self, body, aes_key, iv_key):
+    def verify_fingerprint(self, data_dict):
         URL = urljoin(BASE_URL(self.url), "/nibss/fp/VerifyFingerPrint")
         headers = {
             "OrganisationCode": self.code,
@@ -240,12 +244,13 @@ class Request:
             "Content-Type": self.content_type,
             "Accept": self.accept
         }
-        encrypted = crypting.Crypt().encrypt(body, aes_key, iv_key)
+        body = data_dict["body"]
+        encrypted = crypting.Crypt().encrypt(body, data_dict["Aes_key"], data_dict["Iv_key"])
 
         try:
             r = requests.post(url=URL, headers=headers, data=encrypted)
             if r.status_code == 200:
-                data = crypting.Crypt().decrypt(r.text, aes_key, iv_key)
+                data = crypting.Crypt().decrypt(r.text, data_dict["Aes_key"], data_dict["Iv_key"])
             elif r.status_code == 500:
                 data = "server error"
             elif r.status_code == 403:
