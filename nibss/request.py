@@ -6,6 +6,7 @@ import requests
 import nibss.crypt as crypting
 from urllib.parse import urljoin
 from nibss.url import url as BASE_URL
+from nibss.error_handler import error
 
 
 class Request:
@@ -43,12 +44,8 @@ class Request:
                     "password": r.headers['Password'],
                     "ivkey": r.headers['Ivkey']
                 }
-            elif r.status_code == 500:
-                data = "server error"
-            elif r.status_code == 403:
-                data = "Expired Sandbox Key"
             else:
-                data = "error"
+                data = error(r.status_code)
             return data
 
         t = callback(response)
@@ -73,12 +70,8 @@ class Request:
             r = requests.post(url=URL, headers=headers, data=encrypted)
             if r.status_code == 200:
                 data = crypting.Crypt().decrypt(r.text, data_dict["Aes_key"], data_dict["Iv_key"])
-            elif r.status_code == 500:
-                data = "server error"
-            elif r.status_code == 403:
-                data = "Expired Sandbox Key"
             else:
-                data = "error"
+                data = error(r.status_code)
             return data
         except requests.exceptions.RequestException as e:
             return e
@@ -103,12 +96,8 @@ class Request:
             r = requests.post(url=URL, headers=headers, data=encrypted)
             if r.status_code == 200:
                 data = crypting.Crypt().decrypt(r.text, data_dict["Aes_key"], data_dict["Iv_key"])
-            elif r.status_code == 500:
-                data = "server error"
-            elif r.status_code == 403:
-                data = "Expired Sandbox Key"
             else:
-                data = "error"
+                data = error(r.status_code)
             return data
         except requests.exceptions.RequestException as e:
             return e
@@ -132,12 +121,8 @@ class Request:
             r = requests.post(url=URL, headers=headers, data=encrypted)
             if r.status_code == 200:
                 data = crypting.Crypt().decrypt(r.text, data_dict["Aes_key"], data_dict["Iv_key"])
-            elif r.status_code == 500:
-                data = "server error"
-            elif r.status_code == 403:
-                data = "Expired Sandbox Key"
             else:
-                data = "error"
+                data = error(r.status_code)
             return data
         except requests.exceptions.RequestException as e:
             return e
@@ -160,12 +145,8 @@ class Request:
                     "password": r.headers['Password'],
                     "ivkey": r.headers['Ivkey']
                 }
-            elif r.status_code == 500:
-                data = "server error"
-            elif r.status_code == 403:
-                data = "Expired Sandbox Key"
             else:
-                data = "error"
+                data = error(r.status_code)
             return data
 
         t = placeholder_callback(response)
@@ -190,12 +171,8 @@ class Request:
             r = requests.post(url=URL, headers=headers, data=encrypted)
             if r.status_code == 200:
                 data = crypting.Crypt().decrypt(r.text, data_dict["Aes_key"], data_dict["Iv_key"])
-            elif r.status_code == 500:
-                data = "server error"
-            elif r.status_code == 403:
-                data = "Expired Sandbox Key"
             else:
-                data = "error"
+                data = error(r.status_code)
             return data
         except requests.exceptions.RequestException as e:
             return e
@@ -220,12 +197,8 @@ class Request:
             r = requests.post(url=URL, headers=headers, data=encrypted)
             if r.status_code == 200:
                 data = crypting.Crypt().decrypt(r.text, data_dict["Aes_key"], data_dict["Iv_key"])
-            elif r.status_code == 500:
-                data = "server error"
-            elif r.status_code == 403:
-                data = "Expired Sandbox Key"
             else:
-                data = "error"
+                data = error(r.status_code)
             return data
         except requests.exceptions.RequestException as e:
             return e
@@ -250,13 +223,10 @@ class Request:
             r = requests.post(url=URL, headers=headers, data=encrypted)
             if r.status_code == 200:
                 data = crypting.Crypt().decrypt(r.text, data_dict["Aes_key"], data_dict["Iv_key"])
-            elif r.status_code == 500:
-                data = "server error"
-            elif r.status_code == 403:
-                data = "Expired Sandbox Key"
             else:
-                data = "error"
+                data = error(r.status_code)
             return data
         except requests.exceptions.RequestException as e:
             return e
             sys.exit(1)
+

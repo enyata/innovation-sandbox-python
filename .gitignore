@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
 .idea
->>>>>>> all tests written
-=======
-test_request.py
-
-.idea
-.vscode
-
->>>>>>> added mock test
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -141,4 +128,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
->>>>>>> 7a4f3cfd4b5601366d6602c083ece48456711b05
+
