@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
 .idea
->>>>>>> all tests written
-=======
-test_request.py
-
-.idea
-.vscode
-
->>>>>>> added mock test
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

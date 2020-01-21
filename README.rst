@@ -54,6 +54,8 @@ Installation
 
 # For Organization Code, use ``11111`` for testing purposes
 
+# For sandbox Key, use ``0ae0db703c04119b3db7a03d7f854c13`` for testing purposes
+
 *  to reset sandbox credentials
 
 .. code:: python
@@ -61,6 +63,7 @@ Installation
     >>> from nibss.request import Request
 
     reset = request.sandbox_reset()
+
     >>>print(reset)
     {'aes_key': '9+CZaWqfyI/fwezX', 'password': "^o'e6EXK5T ~^j2=", 'ivkey': 'eRpKTBjdOq6T67D0'}
 
@@ -73,9 +76,10 @@ Installation
 
     verify_single = request.verify_single({
                                 "body":{"BVN": "12345678901"},
-                                "Aes_key":"9+CZaWqfyI/fwezX",
-                                "Iv_key":"eRpKTBjdOq6T67D0"
+                                "Aes_key": YOUR_AES_KEY,
+                                "Iv_key": YOUR_IV_KEY
                             })
+
     >>>print(verify_single)
     {
             'message': 'OK',
@@ -85,6 +89,8 @@ Installation
                      'EnrollmentBranch': 'Victoria Island', 'WatchListed': 'NO'}
     }
 
+# YOUR_AES_KEY and YOUR_IV_KEY are same as the ones given after calling ``reset()`` to reset sandbox credentials
+
 * To Verify a multiple BVN
 
 .. code:: python
@@ -92,10 +98,11 @@ Installation
     >>> from nibss.request import Request
 
     verify_multiple = request.verify_multiple({
-                                "bvns":{"BVNS": "1234567890 1, 12345678902, 12345678903"},
-                                "Aes_key":"9+CZaWqfyI/fwezX",
-                                "Iv_key":"eRpKTBjdOq6T67D0"
+                                "bvns":{"BVNS": "12345678901, 12345678902, 12345678903"},
+                                "Aes_key": YOUR_AES_KEY,
+                                "Iv_key": YOUR_IV_KEY
                             })
+
     >>>print(verify_multiple)
     {
             "message": "OK", "data": {"ResponseCode": "00", "ValidationResponses": [
@@ -122,9 +129,10 @@ Installation
 
     watchlisted = request.bvn_watchlisted({
                                 "body":{"BVN": "12345678901"},
-                                "Aes_key":"9+CZaWqfyI/fwezX",
-                                "Iv_key":"eRpKTBjdOq6T67D0"
+                                "Aes_key": YOUR_AES_KEY,
+                                "Iv_key": YOUR_IV_KEY
                             })
+
     >>>print(watchlisted)
     {
             "message": "OK",
@@ -160,7 +168,9 @@ Installation
                                     "MiddleName": "Adepoju",
                                     "AccountNumber": "0987654321",
                                     "BankCode": "011"
-                                }, "Aes_key":"9+CZaWqfyI/fwezX", "Iv_key":"eRpKTBjdOq6T67D0"})
+                                }, "Aes_key": YOUR_AES_KEY,
+                                "Iv_key": YOUR_IV_KEY})
+
     >>>print(validated_record)
     {
             "message": "OK",
@@ -198,7 +208,8 @@ Installation
                 "AccountNumber": "0987654329",
                 "BankCode": "012"
             }
-        ], "Aes_key":"9+CZaWqfyI/fwezX", "Iv_key":"eRpKTBjdOq6T67D0"})
+        ], "Aes_key": YOUR_AES_KEY,
+            "Iv_key": YOUR_IV_KEY)
     >>>print(validated_records)
     {
             'message': 'OK',
@@ -232,7 +243,8 @@ Installation
                 "nist_impression_type": "0",
                 "value": "c2RzZnNkZnNzZGY="
             }
-        }, "Aes_key":"9+CZaWqfyI/fwezX", "Iv_key":"eRpKTBjdOq6T67D0"})
+        }, "Aes_key": YOUR_AES_KEY,
+            "Iv_key": YOUR_IV_KEY)
     >>>print(fingerprint_records)
     {
             "message": "OK",
