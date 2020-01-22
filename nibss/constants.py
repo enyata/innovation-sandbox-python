@@ -1,1 +1,0 @@
-BASE_URL = 'https://innovation-sandbox-backend.herokuapp.com/nibss/'
