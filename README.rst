@@ -1,0 +1,48 @@
+
+Innovation Sandbox (Python)
+===========================
+
+| A Python module that gives access to the innovation sandbox API on the go!
+
+Features
+~~~~~~~~
+
+* Super easy to use
+* Very easy to understand
+* Get the code right in your editor
+
+Installation
+~~~~~~~~~~~~
+
+* Just fire the following command in your terminal:
+
+.. code:: bash
+
+   pip3 install innovation-sandbox
+
+- | It's that easy. If you are using Python 2.7 use pip instead. Depending on your
+  | permissions, you might need to use ``pip install --user innovation-sandbox`` to install.
+
+* Or you can download the source code from `here <https://github.com/enyata/innovation-sandbox-python>`_, and then just install the package using
+
+.. code:: bash
+
+    python setup.py install
+
+~~~~~~~~~~~~~~~~~
+
+Quick Start Guide
+~~~~~~~~~~~~~~~~~
+
+* To get started with the nibss documentation, check out: `NIBSS <https://github.com/enyata/innovation-sandbox-python/blob/feat/update/nibss/README.rst>`_.
+
+Tests
+~~~~~
+
+* Just type in the following command to run the tests
+
+.. code:: bash
+
+    python3 -m unittest
+
+* This will run the test defined in the files of the ``tests/`` directory
