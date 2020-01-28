@@ -288,7 +288,7 @@ Tests
 
 .. code:: bash
 
-    python3 -m unittest
+    py.test
 
 * This will run the test defined in the files of the ``tests/`` directory
 

@@ -7,7 +7,8 @@ python:
   - "3.8"
 
 script:
-  - python3 -m unittest
+  - pip install -r requirements.txt
+  - py.test
 
 # before_deploy: "echo 'ready?'"
 

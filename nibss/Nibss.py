@@ -1,6 +1,6 @@
+import datetime
 import hashlib
-import arrow
-import nibss.utils.crypt as crypting
+from nibss.utils import crypt as crypting
 
 
 class Nibss:
@@ -13,7 +13,7 @@ class Nibss:
         self.sign_meth = 'SHA256'
         auth_string = params["username"] + ':' + params["password"]
         self.auth_header = crypting.Crypt().hash(auth_string)
-        datenow = arrow.now().format('YYYY-MM-DD').split('-')
+        datenow = str(datetime.date.today()).split('-')
         date = ''.join(datenow)
         signature_string = params["username"] + str(date) + params["password"]
         self.sign_header = hashlib.sha256(signature_string.encode('utf-8')).hexdigest()
@@ -31,4 +31,3 @@ class Nibss:
             "OrganisationCode": self.code,
             "Sandbox-Key": self.key
         }
-
