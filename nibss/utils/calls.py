@@ -1,5 +1,5 @@
 import requests
-import nibss.utils.crypt as crypting
+from nibss.utils import crypt as crypting
 from nibss.utils.error_handler import error
 
 
@@ -28,3 +28,4 @@ def encrypted_request(head, url, aes, iv, body):
     except requests.exceptions.RequestException as e:
         return e
         sys.exit(1)
+

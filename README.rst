@@ -43,6 +43,17 @@ Tests
 
 .. code:: bash
 
-    python3 -m unittest
+    py.test
 
 * This will run the test defined in the files of the ``tests/`` directory
+
+Dependencies
+~~~~~~~~~~~~
+
+* To Download and install all the module dependencies, just type
+
+.. code:: bash
+
+    pip install -r requirements.txt
+
+* And voila! All of the program’s “dependencies” will be downloaded, installed, and ready to go in one fell swoopidy-woop.
