@@ -13,7 +13,7 @@ script:
 jobs:
   include:
     - stage: pip
-      python: '3.4'
+      python: '3.6'
       script: echo 'deploy ready?'
       deploy:
         edge: true
