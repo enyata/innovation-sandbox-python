@@ -1,0 +1,25 @@
+language: python
+python:
+  - '3.4'
+  - '3.5'
+  - '3.6'
+  - '3.7'
+  - '3.8'
+
+script:
+  - pip install -r requirements.txt
+  - py.test
+
+jobs:
+  include:
+    - stage: pip
+      python: '3.4'
+      script: echo 'deploy ready?'
+      deploy:
+        provider: pypi
+        user: '__token__'
+        password:
+          secure: pC3HNrziRtmCzw0KOwLmUm5PwGTyzbAWVsuGEcsl8rdKTdWpd4Yv+nCoqYz1YTKG8xrFWCFJGCpimnOVd/skxI2bSsXpJA0NsLjmKqwRT4AQD0ToPb7n4zfmEbjjSGeHh+n1K/BWBpH+jiAwWDqjWlGO2lnJChozG0FC5+DMKkB3VKsbLQqcKNmkG7Ckq4XSnQ4QxviiXqGRVv3tNkAY0meeSlWdD9gil8dgXzLkt9Dkr83a3y44wa6la95g5dy55c/0JJ5NQBrbtGVwmQNldSHEYsznk67m9Auomkpa+jlAgGbwh3+MLEtYPLQMieB19ChYPpUl5meoNdRbL1EZGuz1BB2ejzicoEMa8ldxCIXAJ8cKi/smMJJZJePfoBwyZ3VvboiCAxwBZ+txfDHE7/f6rQx0Z/AZdOxf6aTs5efO3ITW8JncqWbHto8g0ZuLdR3S1NJzI4ZBVxJoIpg56sVet3ZJi9Wryk6B+b7uTb2Vt6eOE1u8r2OLG3tk5ERP9cHyzE8sXui+gZ1xPJCEGFXfZGB75fLRItz7sSKv5ydSjfbxCbAo//kkbmcrWJJNLjjgd8xbasjIULilfwSf8E3UPNMuSFIHcPxovd4t/TTLxZ09DyF2Vmo+JIHVLjyhWnFQpumDSi2Odg1bPcW4O+WcO8g0bTNZa+N2tS9cOFs=
+        on:
+          tags: true
+          branch: master
