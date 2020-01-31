@@ -16,6 +16,7 @@ jobs:
       python: '3.4'
       script: echo 'deploy ready?'
       deploy:
+        edge: true
         provider: pypi
         user: '__token__'
         password:
