@@ -5,3 +5,5 @@ requests
 Sphinx
 urljoin==1.0.0
 urllib3==1.25.7
+setuptools
+wheel
