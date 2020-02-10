@@ -34,7 +34,7 @@ Installation
 Quick Start Guide
 ~~~~~~~~~~~~~~~~~
 
-* To get started with the nibss documentation, check out: `NIBSS <https://github.com/enyata/innovation-sandbox-python/blob/feat/update/nibss/README.rst>`_.
+* To get started with the nibss documentation, check out: `NIBSS <https://github.com/enyata/innovation-sandbox-python/blob/master/nibss/README.rst>`_.
 
 Tests
 ~~~~~
