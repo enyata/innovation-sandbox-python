@@ -1,11 +1,9 @@
 
 Innovation Sandbox (Python)
-
-.. image:: https://travis-ci.org/enyata/innovation-sandbox-python.svg?branch=master
-    :target: https://travis-ci.org/enyata/innovation-sandbox-python
 ===========================
 .. image:: https://travis-ci.org/enyata/innovation-sandbox-python.svg?branch=master
     :target: https://travis-ci.org/enyata/innovation-sandbox-python
+
 
 | A Python module that gives access to the innovation sandbox API on the go!
 
