@@ -1,4 +1,3 @@
-
 Innovation Sandbox (Python)
 ===========================
 .. image:: https://travis-ci.org/enyata/innovation-sandbox-python.svg?branch=master
@@ -38,6 +37,8 @@ Quick Start Guide
 ~~~~~~~~~~~~~~~~~
 
 * To get started with the nibss documentation, check out: `NIBSS <https://github.com/enyata/innovation-sandbox-python/blob/master/nibss/README.rst>`_.
+
+* To get started with the sterling documentation, check out: `STERLING <https://github.com/enyata/innovation-sandbox-python/blob/master/sterling/README.rst>`_.
 
 Tests
 ~~~~~

@@ -1,5 +1,5 @@
 from urllib.parse import urljoin
-from sterling.utils.url import url as BASE_URL
+from url import url as BASE_URL
 from sterling.Sterling import Sterling
 from sterling.utils.calls import calls
 

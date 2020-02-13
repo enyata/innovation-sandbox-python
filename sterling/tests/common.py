@@ -1,17 +1,21 @@
+from faker import Faker
+
+fake = Faker().random_number()
+
 body = {
-    "Referenceid": "0101",
-    "RequestType": "0101",
-    "Translocation": "0101",
-    "SessionID": "01",
-    "FromAccount": "01",
-    "ToAccount": "01",
-    "Amount": "01",
-    "DestinationBankCode": "01",
-    "NEResponse": "01",
-    "BenefiName": "01",
-    "PaymentReference": "01",
-    "OriginatorAccountName": "01",
-    "translocation": "01"
+    "Referenceid": str(fake),
+    "RequestType": str(fake),
+    "Translocation": str(fake),
+    "SessionID": str(fake),
+    "FromAccount": str(fake),
+    "ToAccount": str(fake),
+    "Amount": str(fake),
+    "DestinationBankCode": str(fake),
+    "NEResponse": str(fake),
+    "BenefiName": str(fake),
+    "PaymentReference": str(fake),
+    "OriginatorAccountName": str(fake),
+    "translocation": str(fake)
 }
 
 responses = {"enquiry" : {
@@ -20,11 +24,11 @@ responses = {"enquiry" : {
         "message": "success",
         "response": "success",
         "data": {
-            "AccountName": "John Doe",
-            "sessionID": "45326576878909090909",
-            "AccountNumber": "45456879898",
-            "status": "97",
-            "BVN": "434565679809",
+            "AccountName": str(Faker().name),
+            "sessionID": str(fake),
+            "AccountNumber": str(fake),
+            "status": str(fake),
+            "BVN": str(fake),
             "ResponseText" : None
         }
     }
@@ -38,7 +42,7 @@ responses = {"enquiry" : {
         "responsedate": "null",
         "data": {
             "ResponseText": "Your transaction has been submitted for processing.",
-            "status": "00",
+            "status": str(fake),
         }
     }
 }
