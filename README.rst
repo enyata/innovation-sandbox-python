@@ -1,5 +1,7 @@
 
-Innovation Sandbox (Python) .. image:: https://travis-ci.org/enyata/innovation-sandbox-python.svg?branch=master
+Innovation Sandbox (Python)
+
+.. image:: https://travis-ci.org/enyata/innovation-sandbox-python.svg?branch=master
     :target: https://travis-ci.org/enyata/innovation-sandbox-python
 ===========================
 
