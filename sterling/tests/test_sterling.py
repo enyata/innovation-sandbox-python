@@ -7,14 +7,13 @@ from sterling.transfer import Transfer
 
 header = {
     "base_url": "",
-    "Sandbox-Key": "0ae0db703c04119b3db7a03d7f854c13",
+    "Sandbox-Key": "sdgfdgjiu98y865egfy8kngyu",
     "Ocp-Apim-Subscription-Key": "t",
     "Ocp-Apim-Trace": "true",
     "Appid": "69",
     "Content-Type": "application/json",
     "ipval": "0"
 }
-
 
 @patch.object(Session, 'request')
 def test_enquiry(mock_get):
