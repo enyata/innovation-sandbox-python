@@ -4,15 +4,18 @@ from unittest.mock import Mock, patch
 from sterling.tests.common import responses, body, query, R
 from sterling.name_enquiry import Enquiry
 from sterling.transfer import Transfer
+from faker import Faker
+
+fake = Faker().random_number()
 
 header = {
     "base_url": "",
-    "Sandbox-Key": "sdgfdgjiu98y865egfy8kngyu",
-    "Ocp-Apim-Subscription-Key": "t",
+    "Sandbox-Key": str(Faker().text()),
+    "Ocp-Apim-Subscription-Key": str(Faker().text()),
     "Ocp-Apim-Trace": "true",
-    "Appid": "69",
+    "Appid": str(fake),
     "Content-Type": "application/json",
-    "ipval": "0"
+    "ipval": str(fake)
 }
 
 @patch.object(Session, 'request')

@@ -49,11 +49,11 @@ responses = {"enquiry" : {
 }
 
 query = {
-	"Referenceid": "01",
-	"RequestType": "01",
-	"Translocation": "01",
-	"ToAccount": "0037514056",
-	"destinationbankcode": "000001"
+	"Referenceid": str(fake),
+	"RequestType": str(fake),
+	"Translocation": str(fake),
+	"ToAccount": str(fake),
+	"destinationbankcode": str(fake)
   }
 class R:
     def __init__(self,text):
