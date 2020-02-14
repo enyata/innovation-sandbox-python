@@ -18,7 +18,7 @@ body = {
     "translocation": str(fake)
 }
 
-responses = {"enquiry" : {
+responses = {"enquiry": {
     "message": "OK",
     "data": {
         "message": "success",
@@ -29,34 +29,35 @@ responses = {"enquiry" : {
             "AccountNumber": str(fake),
             "status": str(fake),
             "BVN": str(fake),
-            "ResponseText" : None
+            "ResponseText": None
         }
     }
 },
 
-"transfer" : {
-    "message": "OK",
-    "data": {
-        "message": "success",
-        "response": "success",
-        "responsedate": "null",
+    "transfer": {
+        "message": "OK",
         "data": {
-            "ResponseText": "Your transaction has been submitted for processing.",
-            "status": str(fake),
+            "message": "success",
+            "response": "success",
+            "responsedate": "null",
+            "data": {
+                "ResponseText": "Your transaction has been submitted for processing.",
+                "status": str(fake),
+            }
         }
     }
 }
-}
 
 query = {
-	"Referenceid": str(fake),
-	"RequestType": str(fake),
-	"Translocation": str(fake),
-	"ToAccount": str(fake),
-	"destinationbankcode": str(fake)
-  }
+    "Referenceid": str(fake),
+    "RequestType": str(fake),
+    "Translocation": str(fake),
+    "ToAccount": str(fake),
+    "destinationbankcode": str(fake)
+}
+
+
 class R:
-    def __init__(self,text):
+    def __init__(self, text):
         self.status_code = 200
         self.text = text
-

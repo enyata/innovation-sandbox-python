@@ -1,11 +1,11 @@
+from .account import *
 from .transfer import *
-from .name_enquiry import *
 from .Sterling import *
 from .utils import *
 
 __all__ = [
-    'transfer',
-    'name_enquiry',
+    'account.py',
+    'transfer.py',
     'Sterling',
     'utils'
 ]

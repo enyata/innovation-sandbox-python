@@ -42,9 +42,9 @@ Query Parameters
 
 .. code:: python
 
-    >>> from sterling.name_enquiry import Enquiry
+    >>> from sterling.transfer import Transfer
 
-    result = Enquiry(header).name_enquiry(query)
+    result = Transfer(header).InterbankNameEnquiry(query)
 
     >>> print(result)
     {
@@ -67,9 +67,24 @@ Query Parameters
 
 .. code:: python
 
-    >>> from sterling.transfer import Transfer
+    >>> from sterling.account import Account
 
-    result = Transfer(header).transfer()
+    body = {
+        "Referenceid": "PROVIDE REFERENCE ID",
+        "RequestType": "PROVIDE REQUEST TYPE",
+        "Translocation": "PROVIDE TRANSLOCATION",
+        "SessionID": "PROVIDE SESSION ID",
+        "FromAccount": "FROM ACCOUNT",
+        "ToAccount": "PROVIDE DESTINATION ACCOUNT",
+        "Amount": "AMOUNT",
+        "DestinationBankCode": "DESTINATION CODE",
+        "NEResponse": "RESPONSE",
+        "BenefiName": "BENEFACTORS NAME",
+        "PaymentReference": "PAYMENT REFERENCE",
+        "OriginatorAccountName": "ORIGINATOR ACCOUNT NAME",
+        "translocation": "TRANSLOCATION"
+    }
+    result = Account(header).InterbankTransferReq(body)
 
     >>> print(result)
     {
