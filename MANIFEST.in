@@ -4,6 +4,7 @@ include README.rst
 include requirements.txt
 
 recursive-include nibss *
+recursive-include sterling *
 
 recursive-exclude * __pycache__
 recursive-exclude * *.py[co]
