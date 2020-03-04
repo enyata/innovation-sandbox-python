@@ -1,7 +1,7 @@
 from nibss.utils.calls import encrypted_request
 from nibss.Nibss import Nibss
 from urllib.parse import urljoin
-from nibss.utils.url import url as BASE_URL
+from url import url as BASE_URL
 
 
 class Bvn(Nibss):
