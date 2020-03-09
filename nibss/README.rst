@@ -41,7 +41,7 @@ Header
 
 .. code:: python
 
-    >>> ffrom nibss.bvn import Bvn
+    >>> from nibss.bvn import Bvn
 
     verify_single = Bvn(header).verify_single({
         "body":{"BVN": "12345678901"},
