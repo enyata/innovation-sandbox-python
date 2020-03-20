@@ -1,8 +1,8 @@
 from atlabs.token import Token
 
 header = {
-    "base_url": "https://innovation-sandbox-backend.herokuapp.com",
-    "Sandbox-Key": "49264b2cc8fd68b33326c6d5468e5290",
+    "base_url": "https://sandboxapi.fsi.ng",
+    "Sandbox-Key": "your-sandbox-key-here",
     "Content-Type": "application/json"
 }
 
