@@ -6,13 +6,13 @@ body = {
 }
 
 params = {
-    "access_token": "e7ce9048-446e-4b9c-8c2b-575a694144c9"
+    "access_token": "your-access-token-here"
 }
 
 headers = {
-    "base_url": "https://innovation-sandbox-backend.herokuapp.com",
+    "base_url": "https://sandboxapi.fsi.ng",
     "Content-Type": "application/json",
-    "Sandbox-Key": "49264b2cc8fd68b33326c6d5468e5290"
+    "Sandbox-Key": "your-sandbox-key-here"
 }
 
 result = Enquiry(headers).Account(body, params)

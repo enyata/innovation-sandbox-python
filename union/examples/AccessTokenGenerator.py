@@ -10,9 +10,9 @@ body = {
 }
 
 header = {
-    "base_url": "https://innovation-sandbox-backend.herokuapp.com",
+    "base_url": "https://sandboxapi.fsi.ng",
     "Content-Type": "application/x-www-form-urlencoded",
-    "Sandbox-Key": "49264b2cc8fd68b33326c6d5468e5290"
+    "Sandbox-Key": "your-sandbox-key-here"
 }
 
 result = Token(header).AccessTokenGenerator(body)
