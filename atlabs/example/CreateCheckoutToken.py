@@ -11,4 +11,5 @@ body = {
 }
 
 result = Token(header).CreateCheckoutToken(body)
+
 print(result)
