@@ -12,5 +12,5 @@ body = {
     "message": "Hello world!"
 }
 
-result = Sms(header).SendSms(body)
+result = Sms(header).SendMessage(body)
 print(result)

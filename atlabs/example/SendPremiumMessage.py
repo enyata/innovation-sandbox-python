@@ -15,5 +15,5 @@ body = {
     "retryDurationInHours": 1
 }
 
-result = Sms(header).SendPremiumSms(body)
+result = Sms(header).SendPremiumMessage(body)
 print(result)
