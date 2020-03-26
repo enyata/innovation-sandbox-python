@@ -14,7 +14,7 @@ params = {
 }
 
 header = {
-    "base_url": "https://innovation-sandbox-backend.herokuapp.com",
+    "base_url": "https://sandboxapi.fsi.ng",
     "Content-Type": "application/json",
     "Sandbox-Key": "your-sandbox-key-here"
 }
