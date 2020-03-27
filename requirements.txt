@@ -1,8 +1,8 @@
 aes==1.0.0
 pycryptodome==3.9.4
-pytest
-requests
-Sphinx
+pytest==5.4.1
+requests==2.23.0
+Sphinx==2.4.4
 urljoin==1.0.0
 urllib3==1.25.7
 setuptools
