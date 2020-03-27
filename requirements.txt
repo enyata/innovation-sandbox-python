@@ -1,7 +1,7 @@
 aes==1.0.0
 pycryptodome==3.9.4
 pytest==4.3.1
-requests==2.23.0
+requests==2.21.0
 Sphinx==2.4.4
 urljoin==1.0.0
 urllib3==1.25.7
