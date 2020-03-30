@@ -131,3 +131,4 @@ dmypy.json
 .pyre/
 
 temp.py
+.DS_Store
