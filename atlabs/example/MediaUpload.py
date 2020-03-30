@@ -8,7 +8,7 @@ header = {
 
 body = {
     "phoneNumber": "+2348123456789",
-    "url": "http://test.com"
+    "url": "link-to-media-file"
 }
 
 result = Voice(header).MediaUpload(body)

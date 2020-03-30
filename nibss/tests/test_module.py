@@ -18,29 +18,37 @@ def test_reset(mock_post):
     mock_post.return_value = R("")
     assert Credentials(b).reset() == data, "should return an object"
 
+
 @patch('requests.post')
 def test_verify_single(mock_post):
     data = responses["single_bvn"]
     mock_post.return_value = R(body["single_bvn"])
-    assert Bvn(b).verify_single({"body": {"BVN": "12345678901"}, "Aes_key": aes, "Iv_key": iv}) == data, "should return object"
+    assert Bvn(b).verify_single({"body": {"BVN": "12345678901"},
+                                 "Aes_key": aes, "Iv_key": iv}) == data, "should return object"
+
 
 @patch('requests.post')
 def test_multiple_bvn(mock_post):
     data = responses["multiple_bvn"]
     mock_post.return_value = R(body["multiple_bvn"])
-    assert Bvn(b).verify_multiple({"bvns": {"BVNS": "1234567890 1, 12345678902, 12345678903"}, "Aes_key": aes, "Iv_key": iv}) == data, "should return object"
+    assert Bvn(b).verify_multiple({"bvns": {"BVNS": "1234567890 1, 12345678902, 12345678903"},
+                                   "Aes_key": aes, "Iv_key": iv}) == data, "should return object"
+
 
 @patch('requests.post')
 def test_watchlisted(mock_post):
     output = responses["watchlist"]
     mock_post.return_value = R(body["watchlist"])
-    assert Bvn(b).bvn_watchlisted({"body": {"BVN": "12345678901"}, "Aes_key": aes, "Iv_key": iv}) == output, "should return an object"
+    assert Bvn(b).bvn_watchlisted({"body": {
+        "BVN": "12345678901"}, "Aes_key": aes, "Iv_key": iv}) == output, "should return an object"
+
 
 @patch('requests.post')
 def test_placeholder_reset(mock_post):
     data = {'aes_key': aes, 'password': "fdgfudkjd", 'ivkey': iv}
     mock_post.return_value = R("")
     assert Record(b).bvn_placeholder_reset() == data, "should return an object"
+
 
 @patch('requests.post')
 def test_validate_record(mock_post):
@@ -56,6 +64,7 @@ def test_validate_record(mock_post):
             "BankCode": "011"
         },
         "Aes_key": aes, "Iv_key": iv}) == response, "should return an object"
+
 
 @patch('requests.post')
 def test_validate_records(mock_post):
@@ -80,6 +89,7 @@ def test_validate_records(mock_post):
         }
     ], "Aes_key": aes, "Iv_key": iv}) == response, "should return an object"
 
+
 @patch('requests.post')
 def test_verify_finger_print(mock_post):
     response = responses["fingerprint_data"]
@@ -95,4 +105,3 @@ def test_verify_finger_print(mock_post):
             "value": "c2RzZnNkZnNzZGY="
         }
     }, "Aes_key": aes, "Iv_key": iv}) == response, "should return an object"
-
