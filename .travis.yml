@@ -6,9 +6,11 @@ python:
   - '3.7'
   - '3.8'
 
-script:
+before_script:
   - pip install -r requirements.txt
-  - py.test
+
+script:
+  - pytest
 
 jobs:
   include:
@@ -16,28 +18,13 @@ jobs:
       python: 3.8           # this works for Linux but is ignored on macOS or Windows
     - name: "Python 3.7.4 on macOS"
       os: osx
-      osx_image: xcode11.2  # Python 3.7.4 running on macOS 10.14.4
-      language: sh       # 'language: python' is an error on Travis CI macOS
-      env:
-        - TOXENV=py3
-        - HOMEBREW_NO_INSTALL_CLEANUP=1
-        - HOMEBREW_NO_ANALYTICS=1
-      before_cache:
-        # - brew cleanup
-        - rm -f "$HOME/Library/Caches/pip/log/debug.log"
-      cache:
-        directories:
-          # - "$HOME/Library/Caches/Homebrew"
-          - "$HOME/Library/Caches/pip"
-      addons:
-        homebrew:
-           # update: true
-          packages: python3
-      before_install:
-        - python3 -m pip install --upgrade virtualenv
-        - virtualenv -p python3 --system-site-packages "$HOME/venv"
-        - source "$HOME/venv/bin/activate"
-        - pip install pytest
+      osx_image: xcode11.3  # Python 3.7.4 running on macOS 10.14.4
+      language: shell       # 'language: python' is an error on Travis CI macOS
+      before_script:
+        - pip3 --version
+        - pip3 install --user -r requirements.txt
+        - pytest --version
+      env: PATH=$HOME/Library/Python/3.7/bin:$PATH
     - name: "Python 3.8.0 on Windows"
       os: windows           # Windows 10.0.17134 N/A Build 17134
       language: shell       # 'language: python' is an error on Travis CI Windows
@@ -59,6 +46,3 @@ jobs:
           branch: master
 
 install: pip3 install --upgrade pip  # all three OSes agree about 'pip3'
-
-
-
