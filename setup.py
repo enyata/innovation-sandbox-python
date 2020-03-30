@@ -7,7 +7,7 @@ setup(
     name="innovation-sandbox",
     version="2.0.0",
     description="Python package for Innovation Sandbox",
-    long_description=open("README.rst").read(),
+    # long_description=open("README.rst").read(),
     packages=find_packages(),
     url = "https://github.com/enyata/innovation-sandbox-python",
     license='MIT',
