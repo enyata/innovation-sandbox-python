@@ -36,6 +36,22 @@ def test_multiple_bvn(mock_post):
 
 
 @patch('requests.post')
+def test_get_single(mock_post):
+    data = responses["single_bvn"]
+    mock_post.return_value = R(body["single_bvn"])
+    assert Bvn(b).verify_single({"body": {"BVN": "12345678901"},
+                                 "Aes_key": aes, "Iv_key": iv}) == data, "should return object"
+
+
+@patch('requests.post')
+def test_get_multiple_bvn(mock_post):
+    data = responses["multiple_bvn"]
+    mock_post.return_value = R(body["multiple_bvn"])
+    assert Bvn(b).verify_multiple({"bvns": {"BVNS": "1234567890 1, 12345678902, 12345678903"},
+                                   "Aes_key": aes, "Iv_key": iv}) == data, "should return object"
+
+
+@patch('requests.post')
 def test_watchlisted(mock_post):
     output = responses["watchlist"]
     mock_post.return_value = R(body["watchlist"])
