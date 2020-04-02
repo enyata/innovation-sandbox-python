@@ -60,7 +60,7 @@ print(result)
 
 This operation provides basic account information of CASA or GL.
 
-```python3
+```python
 from union.enquiry import Enquiry
 
 body =  {
@@ -87,7 +87,7 @@ print(result)
 
 This operation provides basic customer information of CASA or GL.
 
-```python3
+```python
 from union.enquiry import Enquiry
 
 body =  {
@@ -115,7 +115,7 @@ print(result)
 
 This operation enables client to do customer and account enquiry with a single call. The return message contains both customer and account information.
 
-```python3
+```python
 from union.enquiry import Enquiry
 
 body =  {

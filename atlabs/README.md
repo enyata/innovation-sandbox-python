@@ -64,7 +64,7 @@ Your Africa's Talking issued virtual phone number.
 
 Phone number to dial
 
-```python3
+```python
 from atlabs.voice import Voice
 
 header = {
@@ -80,7 +80,6 @@ body = {
 
 result = Voice(header).VoiceCall(body)
 print(result)
-
 ```
 
 ## Fetch Queue Calls
@@ -91,7 +90,7 @@ Get queued calls
 
 Your Africa's Talking issued virtual phone number.
 
-```python3
+```python
 from atlabs.voice import Voice
 
 header = {
@@ -121,7 +120,7 @@ Your Africa's Talking issued virtual phone number.
 
 URL to your media file
 
-```python3
+```python
 from atlabs.voice import Voice
 
 header = {
