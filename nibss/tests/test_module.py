@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import Mock, patch
-from nibss.credentials import Credentials
-from nibss.bvn import Bvn
+# from nibss.credentials import Credentials
+from nibss.bvnr import Bvn
 from nibss.records import Record
 from nibss.fingerprint import FingerPrint
 from nibss.tests.common import body, R, iv, aes, responses
@@ -16,7 +16,7 @@ b = {
 def test_reset(mock_post):
     data = {'aes_key': aes, 'password': "fdgfudkjd", 'ivkey': iv}
     mock_post.return_value = R("")
-    assert Credentials(b).reset() == data, "should return an object"
+    assert Bvn(b).reset() == data, "should return an object"
 
 
 @patch('requests.post')
