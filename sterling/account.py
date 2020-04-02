@@ -1,14 +1,15 @@
-import json
 from urllib.parse import urljoin
 from url import url as BASE_URL
 from sterling.Sterling import Sterling
 from sterling.utils.calls import calls
 
 
+
+
 class Account(Sterling):
-    def InterbankTransferReq(self, body):
+    def InterbankNameEnquiry(self, query):
         url = urljoin(BASE_URL(self.url),
-                      "/sterling/accountapi/api/Spay/InterbankTransferReq")
+                      "/sterling/TransferAPIs/api/Spay/InterbankNameEnquiry")
         header = self.headers
-        apiResponse = calls("post", url, None, json.dumps(body), header)
-        return (apiResponse)
+        apiResponse = calls("get", url, query, "", header)
+        return apiResponse

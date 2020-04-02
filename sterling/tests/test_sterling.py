@@ -23,11 +23,11 @@ header = {
 def test_enquiry(mock_get):
     data = responses["enquiry"]
     mock_get.return_value = R(responses["enquiry"])
-    assert Transfer(header).InterbankNameEnquiry(query) == data, "should return an object"
+    assert Account(header).InterbankNameEnquiry(query) == data, "should return an object"
 
 
 @patch.object(Session, 'request')
 def test_transfer(mock_post):
     data = responses["transfer"]
     mock_post.return_value = R(responses["transfer"])
-    assert Account(header).InterbankTransferReq(body) == data, "should return an object"
+    assert Transfer(header).InterbankTransferReq(body) == data, "should return an object"
