@@ -13,10 +13,17 @@ b = {
 
 
 @patch('requests.post')
-def test_reset(mock_post):
+def test_bvn_reset(mock_post):
     data = {'aes_key': aes, 'password': "fdgfudkjd", 'ivkey': iv}
     mock_post.return_value = R("")
     assert Bvn(b).reset() == data, "should return an object"
+
+
+@patch('requests.post')
+def test_fp_reset(mock_post):
+    data = {'aes_key': aes, 'password': "fdgfudkjd", 'ivkey': iv}
+    mock_post.return_value = R("")
+    assert FingerPrint(b).reset() == data, "should return an object"
 
 
 @patch('requests.post')
