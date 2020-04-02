@@ -30,14 +30,15 @@ The header is an argument passed when instantiating any object in this module
 
 ```python
  header = {
-        "base_url": "your host ",
-        "Sandbox-Key": "insert here your sandbox key",
-		"Ocp-Apim-Subscription-Key": "t",
-		"Ocp-Apim-Trace": "true",
-		"Appid": "69",
-		"Content-Type": "application/json",
-		"ipval": "0"
-    }
+    "base_url": "your host ",
+    "Sandbox-Key": "insert here your sandbox key",
+	"Ocp-Apim-Subscription-Key": "t",
+	"Ocp-Apim-Trace": "true",
+	"Appid": "69",
+	"Content-Type": "application/json",
+	"ipval": "0"
+}
+
 ```
 
 ## Interbank Name Enquiry([options])
@@ -72,22 +73,22 @@ This is the NUBAN of the transaction recipient account.
 
 This is the destination bank's code
 
-### InnovationSandbox\Sterling\Transfer\InterbankNameEnquiry(credentials)
+### InterbankNameEnquiry(credentials)
 
 The credentials stated above will be passed as a query. The query parameter is passed as an argument to the named enquiry method. For example,
 
 ```python
-from sterling.transfer import Transfer
+from sterling.account import Account
 
 query = {
-        "Referenceid": "01",
-        "RequestType": "01",
-        "Translocation": "01",
-        "ToAccount": "0037514056",
-        "destinationbankcode": "00001"
-    }
+    "Referenceid": "01",
+    "RequestType": "01",
+    "Translocation": "01",
+    "ToAccount": "0037514056",
+    "destinationbankcode": "00001"
+}
 
-result = Transfer(header).InterbankNameEnquiry(query)
+result = Account(header).InterbankNameEnquiry(query)
 
 print(result)
 
@@ -143,29 +144,29 @@ This is the destination bank's code
 
 ##### translocation
 
-### InnovationSandbox\Sterling\Account\InterbankTransferReq(credentials)
+### InterbankTransferReq(credentials)
 
 The credentials stated above will be passed as a body parameter. The body parameter is passed as an argument to the named enquiry method. For example,
 
 ```python
-from sterling.account import Account
+from sterling.transfer import Transfer
 body = {
-        "Referenceid": "0101",
-        "RequestType": "0101",
-        "Translocation": "0101",
-        "SessionID": "01",
-        "FromAccount": "01",
-        "ToAccount": "01",
-        "Amount": "01",
-        "DestinationBankCode": "01",
-        "NEResponse": "01",
-        "BenefiName": "01",
-        "PaymentReference": "01",
-        "OriginatorAccountName": "01",
-        "translocation": "01"
-    }
+    "Referenceid": "0101",
+    "RequestType": "0101",
+    "Translocation": "0101",
+    "SessionID": "01",
+    "FromAccount": "01",
+    "ToAccount": "01",
+    "Amount": "01",
+    "DestinationBankCode": "01",
+    "NEResponse": "01",
+    "BenefiName": "01",
+    "PaymentReference": "01",
+    "OriginatorAccountName": "01",
+    "translocation": "01"
+}
 
-result = Account(header).InterbankTransferReq(body)
+result = Transfer(header).InterbankTransferReq(body)
 
 print(result)
 

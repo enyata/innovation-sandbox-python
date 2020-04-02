@@ -14,7 +14,7 @@ Below is a list of required credentials.
 
 The header is an argument passed when instantiating any object in this module.
 
-```python3
+```python
 header = {
     "base_url": "https://sandboxapi.fsi.ng",
     "Sandbox-Key": "your-sandbox-key-here",
@@ -50,6 +50,7 @@ body = {
 result = Token(header).CreateCheckoutToken(body)
 
 print(result)
+
 ```
 
 ## Voice Call
@@ -79,7 +80,9 @@ body = {
 }
 
 result = Voice(header).VoiceCall(body)
+
 print(result)
+
 ```
 
 ## Fetch Queue Calls
@@ -135,6 +138,7 @@ body = {
 }
 
 result = Voice(header).MediaUpload(body)
+
 print(result)
 
 ```
@@ -175,6 +179,7 @@ body = {
 }
 
 result = Sms(header).SendSms(body)
+
 print(result)
 
 ```
@@ -226,6 +231,7 @@ body = {
 }
 
 result = Sms(header).SendPremiumSms(body)
+
 print(result)
 
 ```
@@ -267,6 +273,7 @@ body = {
 }
 
 result = Sms(header).CreatePremiumSubscription(body)
+
 print(result)
 
 ```
@@ -303,6 +310,7 @@ body = {
 }
 
 result = Sms(header).DeletePremiumSubscription(body)
+
 print(result)
 
 ```
@@ -339,6 +347,7 @@ body = {
 }
 
 result = Sms(header).FetchPremiumSubscription(body)
+
 print(result)
 
 ```
@@ -365,6 +374,7 @@ body = {
 }
 
 result = Sms(header).FetchMessage(body)
+
 print(result)
 
 ```
@@ -399,6 +409,7 @@ body = {
 }
 
 result = Airtime(header).SendAirtime(body)
+
 print(result)
 
 ```

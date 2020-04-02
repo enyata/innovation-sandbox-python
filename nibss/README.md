@@ -26,14 +26,14 @@ This is to be sent along for every request made, it contains the credentials men
 
 ```python
 header = {
-        "base_url": "your host",
-        "Organizationcode": "11111",
-        "sandbox-key": "your sandbox_key",
-        "content-type": "application/json",
-        "accept": "application/json",
-        "username": "your organization code or 11111",
-        "password": ""
-    }
+    "base_url": "your host",
+    "Organizationcode": "11111",
+    "sandbox-key": "your sandbox_key",
+    "content-type": "application/json",
+    "accept": "application/json",
+    "username": "your organization code or 11111",
+    "password": ""
+}
 
 ```
 
@@ -78,10 +78,10 @@ In additions to the credentials stated above a 'bvn' key with the value of the b
 from nibss.bvn import Bvn
 
 verify_single = Bvn(header).verify_single({
-        "body":{"BVN": "12345678901"},
-        "Aes_key": "YOUR_AES_KEY",
-        "Iv_key": "YOUR_IV_KEY"
-    })
+    "body":{"BVN": "12345678901"},
+    "Aes_key": "YOUR_AES_KEY",
+    "Iv_key": "YOUR_IV_KEY"
+})
 
 print(verify_single)
 
@@ -99,10 +99,10 @@ Credentials are same as verify_single. The BVNs are separated by comma. For exam
 from nibss.bvn import Bvn
 
 verify_multiple = Bvn(header).verify_multiple({
-        "bvns":{"BVNS": "12345678901, 12345678902, 12345678903"},
-        "Aes_key": "YOUR_AES_KEY",
-        "Iv_key": "YOUR_IV_KEY"
-    })
+    "bvns":{"BVNS": "12345678901, 12345678902, 12345678903"},
+    "Aes_key": "YOUR_AES_KEY",
+    "Iv_key": "YOUR_IV_KEY"
+})
 
 print(verify_multiple)
 
@@ -122,10 +122,10 @@ Credentials are same as verify_single.
 from nibss.bvn import Bvn
 
 get_single = Bvn(header).get_single({
-        "body":{"BVN": "12345678901"},
-        "Aes_key": "YOUR_AES_KEY",
-        "Iv_key": "YOUR_IV_KEY"
-    })
+    "body":{"BVN": "12345678901"},
+    "Aes_key": "YOUR_AES_KEY",
+    "Iv_key": "YOUR_IV_KEY"
+})
 
 print(get_single)
 
@@ -143,10 +143,10 @@ Credentials are same as verify_multiple.
 from nibss.bvn import Bvn
 
 get_multiple = Bvn(header).get_multiple({
-        "bvns":{"BVNS": "12345678901, 12345678902, 12345678903"},
-        "Aes_key": "YOUR_AES_KEY",
-        "Iv_key": "YOUR_IV_KEY"
-    })
+    "bvns":{"BVNS": "12345678901, 12345678902, 12345678903"},
+    "Aes_key": "YOUR_AES_KEY",
+    "Iv_key": "YOUR_IV_KEY"
+})
 
 print(get_multiple)
 
@@ -164,12 +164,13 @@ Credentials are same as verify_single.
 from nibss.bvn import Bvn
 
 watchlisted = Bvn(header).bvn_watchlisted({
-        "body":{"BVN": "12345678901"},
-        "Aes_key": "YOUR_AES_KEY",
-        "Iv_key": "YOUR_IV_KEY"
-    })
+    "body":{"BVN": "12345678901"},
+    "Aes_key": "YOUR_AES_KEY",
+    "Iv_key": "YOUR_IV_KEY"
+})
 
 print(watchlisted)
+
 ```
 
 ### Verify Finger Print
@@ -198,7 +199,8 @@ fingerprint_records = FingerPrint(header).verify_fingerprint(
         },
         "Aes_key": "YOUR_AES_KEY",
         "Iv_key": "YOUR_IV_KEY"
-    })
+    }
+)
 
 print(fingerprint_records)
 
@@ -216,18 +218,20 @@ Credentials are same as verify_single.
 from nibss.records import Record
 
 validated_record = Record(header).validate_record({
-        "body":{
-        "BVN": "12345678901",
-        "FirstName": "Uchenna",
-        "LastName": "Okoro",
-        "MiddleName": "Adepoju",
-        "AccountNumber": "0987654321",
-        "BankCode": "011"
-        },"Aes_key": "YOUR_AES_KEY",
-        "Iv_key": "YOUR_IV_KEY"
-    })
+    "body":{
+    "BVN": "12345678901",
+    "FirstName": "Uchenna",
+    "LastName": "Okoro",
+    "MiddleName": "Adepoju",
+    "AccountNumber": "0987654321",
+    "BankCode": "011"
+    },
+    "Aes_key": "YOUR_AES_KEY",
+    "Iv_key": "YOUR_IV_KEY"
+})
 
 print(validated_record)
+
 ```
 
 ### Validate Multiple Records
@@ -242,7 +246,8 @@ Credentials are same as verify_single.
 from nibss.records import Record
 
 validated_records = Record(header).validate_records({
-        "body":[
+    "body":
+    [
         {
             "BVN": "12345678901",
             "FirstName": "Uchenna",
@@ -259,10 +264,11 @@ validated_records = Record(header).validate_records({
             "AccountNumber": "0987654329",
             "BankCode": "012"
         }
-        ],
+    ],
         "Aes_key": "YOUR_AES_KEY",
         "Iv_key": "YOUR_IV_KEY"
-    })
+    }
+)
 
 print (validated_records)
 
