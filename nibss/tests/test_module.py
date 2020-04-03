@@ -1,6 +1,5 @@
 import pytest
 from unittest.mock import Mock, patch
-# from nibss.credentials import Credentials
 from nibss.bvnr import Bvn
 from nibss.records import Record
 from nibss.fingerprint import FingerPrint
