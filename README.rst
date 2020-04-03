@@ -40,6 +40,10 @@ Quick Start Guide
 
 * To get started with the sterling documentation, check out: `STERLING <https://github.com/enyata/innovation-sandbox-python/blob/master/sterling/README.rst>`_.
 
+* To get started with the atlabs documentation, check out: `ATLABS <https://github.com/enyata/innovation-sandbox-python/blob/master/atlabs/README.rst>`_.
+
+* To get started with the union documentation, check out: `UNION <https://github.com/enyata/innovation-sandbox-python/blob/master/union/README.rst>`_.
+
 Tests
 ~~~~~
 
