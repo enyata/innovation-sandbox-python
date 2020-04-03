@@ -1,6 +1,14 @@
 INNOVATION SANDBOX (NIBSS)
 ==========================
 
+Install
+-------
+
+.. code:: bash
+
+
+    $ pip3 install innovation-sandbox
+
 RESET\_TOKEN([Options])
 -----------------------
 

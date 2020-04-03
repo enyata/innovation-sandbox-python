@@ -39,7 +39,7 @@ Generate access token
 A Token Generation message is a request to generate a one-time access
 code also known as token for a UBN-MiServe transaction.
 
-.. code:: python
+.. code:: python3
 
     from union.token import Token
 
@@ -157,7 +157,7 @@ Change User Credentials
 
 This operation enables client to change password.
 
-.. code:: python
+.. code:: python3
 
     from union.user import User
 

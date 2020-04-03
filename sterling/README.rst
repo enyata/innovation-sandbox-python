@@ -1,6 +1,14 @@
 INNOVATION SANDBOX (Sterling)
 =============================
 
+Install
+-------
+
+.. code:: bash
+
+
+    $ pip3 install innovation-sandbox
+
 Common Credentials
 ------------------
 
