@@ -9,7 +9,7 @@ setup(
     description="Python package for Innovation Sandbox",
     # long_description=open("README.rst").read(),
     packages=find_packages(),
-    url = "https://github.com/enyata/innovation-sandbox-python",
+    url="https://github.com/enyata/innovation-sandbox-python",
     license='MIT',
     setup_requires=['wheel'],
     classifiers=[
@@ -28,5 +28,17 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
+    install_requires=[
+        'aes==1.0.0',
+        'pycryptodome==3.9.4',
+        'pytest',
+        'requests',
+        'Sphinx',
+        'urljoin==1.0.0',
+        'urllib3==1.25.7',
+        'setuptools',
+        'wheel',
+        'faker==4.0.0'
+    ]
 
 )
