@@ -1,7 +1,6 @@
 import pytest
 from unittest.mock import Mock, patch
-from nibss.credentials import Credentials
-from nibss.bvn import Bvn
+from nibss.bvnr import Bvn
 from nibss.records import Record
 from nibss.fingerprint import FingerPrint
 from nibss.tests.common import body, R, iv, aes, responses
@@ -13,10 +12,17 @@ b = {
 
 
 @patch('requests.post')
-def test_reset(mock_post):
+def test_bvn_reset(mock_post):
     data = {'aes_key': aes, 'password': "fdgfudkjd", 'ivkey': iv}
     mock_post.return_value = R("")
-    assert Credentials(b).reset() == data, "should return an object"
+    assert Bvn(b).reset() == data, "should return an object"
+
+
+@patch('requests.post')
+def test_fp_reset(mock_post):
+    data = {'aes_key': aes, 'password': "fdgfudkjd", 'ivkey': iv}
+    mock_post.return_value = R("")
+    assert FingerPrint(b).reset() == data, "should return an object"
 
 
 @patch('requests.post')
@@ -29,6 +35,22 @@ def test_verify_single(mock_post):
 
 @patch('requests.post')
 def test_multiple_bvn(mock_post):
+    data = responses["multiple_bvn"]
+    mock_post.return_value = R(body["multiple_bvn"])
+    assert Bvn(b).verify_multiple({"bvns": {"BVNS": "1234567890 1, 12345678902, 12345678903"},
+                                   "Aes_key": aes, "Iv_key": iv}) == data, "should return object"
+
+
+@patch('requests.post')
+def test_get_single(mock_post):
+    data = responses["single_bvn"]
+    mock_post.return_value = R(body["single_bvn"])
+    assert Bvn(b).verify_single({"body": {"BVN": "12345678901"},
+                                 "Aes_key": aes, "Iv_key": iv}) == data, "should return object"
+
+
+@patch('requests.post')
+def test_get_multiple_bvn(mock_post):
     data = responses["multiple_bvn"]
     mock_post.return_value = R(body["multiple_bvn"])
     assert Bvn(b).verify_multiple({"bvns": {"BVNS": "1234567890 1, 12345678902, 12345678903"},
