@@ -1,6 +1,6 @@
 from union.config import Union
 from urllib.parse import urljoin
-from url import url as BASE_URL
+from url.base import url as BASE_URL
 from .utils.constants import ACCOUNT_ENQUIRY, CUSTOMER_ENQUIRY, CUSTOMER_AND_ACCOUNT_ENQUIRY
 from .utils.request_handler import requestWithParams
 

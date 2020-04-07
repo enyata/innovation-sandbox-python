@@ -1,6 +1,6 @@
 from union.config import Union
 from urllib.parse import urljoin
-from url import url as BASE_URL
+from url.base import url as BASE_URL
 from .utils.constants import ACCESS_TOKEN_GENERATOR
 from .utils.request_handler import request
 
