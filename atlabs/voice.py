@@ -1,6 +1,6 @@
 from atlabs.config import Atlabs
 from urllib.parse import urljoin
-from url import url as BASE_URL
+from url.base import url as BASE_URL
 from .utils.constants import VOICE_CALL, QUEUE_STATUS, MEDIA_UPLOAD
 from .utils.request_handler import request
 

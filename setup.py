@@ -5,7 +5,7 @@ here = path.abspath(path.dirname(__file__))
 
 setup(
     name="innovation-sandbox",
-    version="2.2.1",
+    version="2.2.2",
     description="Python package for Innovation Sandbox",
     # long_description=open("README.rst").read(),
     packages=find_packages(),

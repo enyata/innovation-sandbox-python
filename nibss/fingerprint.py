@@ -1,7 +1,7 @@
 from .utils.calls import encrypted_request, request
 from nibss.Nibss import Nibss
 from urllib.parse import urljoin
-from url import url as BASE_URL
+from url.base import url as BASE_URL
 
 
 class FingerPrint(Nibss):
