@@ -1,6 +1,6 @@
 from atlabs.config import Atlabs
 from urllib.parse import urljoin
-from url import url as BASE_URL
+from url.base import url as BASE_URL
 from .utils.constants import SEND_MESSAGE, SEND_PREMIUM_MESSAGE, CREATE_PREMIUM_SUBSCRIPTION, DELETE_PREMIUM_SUBSCRIPTION, FETCH_PREMIUM_SUBSCRIPTION, FETCH_MESSAGE
 from .utils.request_handler import request
 
