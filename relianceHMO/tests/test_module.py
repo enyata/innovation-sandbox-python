@@ -42,44 +42,44 @@ def test_register_enrollees(mock_post):
         body["RegisterEnrollees"]) == data, "should return an object"
 
 
-@patch('requests.post')
-def test_get_all_enrollee(mock_post):
-    data = responses['GetAllEnrollee']
-    mock_post.return_value = R(data)
-    assert Enrollees(header).GetAllEnrollee(
-        params["GetAllEnrollee"]) == data, "should return an object"
+# @patch('requests.post')
+# def test_get_all_enrollee(mock_post):
+#     data = responses['GetAllEnrollee']
+#     mock_post.return_value = R(data)
+#     assert Enrollees(header).GetAllEnrollee(
+#         params["GetAllEnrollee"]) == data, "should return an object"
 
 
-@patch('requests.post')
-def test_get_enrollee(mock_post):
-    data = responses['GetEnrollee']
-    mock_post.return_value = R(data)
-    assert Enrollees(header).GetEnrollee(
-        params["GetEnrollee"]) == data, "should return an object"
+# @patch('requests.post')
+# def test_get_enrollee(mock_post):
+#     data = responses['GetEnrollee']
+#     mock_post.return_value = R(data)
+#     assert Enrollees(header).GetEnrollee(
+#         params["GetEnrollee"]) == data, "should return an object"
 
 
-@patch('requests.post')
-def test_complete_enrollee_profile(mock_post):
-    data = responses['CompleteEnrolleeProfile']
-    mock_post.return_value = R(data)
-    assert Enrollees(header).Profile(
-        params["CompleteEnrolleeProfile"]) == data, "should return an object"
+# @patch('requests.post')
+# def test_complete_enrollee_profile(mock_post):
+#     data = responses['CompleteEnrolleeProfile']
+#     mock_post.return_value = R(data)
+#     assert Enrollees(header).Profile(
+#         params["CompleteEnrolleeProfile"]) == data, "should return an object"
 
 
-@patch('requests.post')
-def test_enrollee_validation(mock_post):
-    data = responses['EnrolleesValidation']
-    mock_post.return_value = R(data)
-    assert Enrollees(header).Validate(
-        params["EnrolleesValidation"]) == data, "should return an object"
+# @patch('requests.post')
+# def test_enrollee_validation(mock_post):
+#     data = responses['EnrolleesValidation']
+#     mock_post.return_value = R(data)
+#     assert Enrollees(header).Validate(
+#         params["EnrolleesValidation"]) == data, "should return an object"
 
 
-@patch('requests.post')
-def test_enrollee_id_card(mock_post):
-    data = responses['EnrolleesIDCard']
-    mock_post.return_value = R(data)
-    assert Enrollees(header).Card(
-        params["EnrolleesIDCard"]) == data, "should return an object"
+# @patch('requests.post')
+# def test_enrollee_id_card(mock_post):
+#     data = responses['EnrolleesIDCard']
+#     mock_post.return_value = R(data)
+#     assert Enrollees(header).Card(
+#         params["EnrolleesIDCard"]) == data, "should return an object"
 
 
 @patch('requests.get')
@@ -98,12 +98,12 @@ def test_individual_signup(mock_post):
         body["IndividualSignup"]) == data, "should return an object"
 
 
-@patch('requests.post')
-def test_renew_subscription_signup(mock_post):
-    data = responses['RenewSubscriptionIndividuals']
-    mock_post.return_value = R(data)
-    assert Retails(header).Renew(
-        body["RenewSubscriptionIndividuals"]) == data, "should return an object"
+# @patch('requests.post')
+# def test_renew_subscription_signup(mock_post):
+#     data = responses['RenewSubscriptionIndividuals']
+#     mock_post.return_value = R(data)
+#     assert Retails(header).Renew(
+#         body["RenewSubscriptionIndividuals"]) == data, "should return an object"
 
 
 @patch('requests.get')
@@ -151,11 +151,11 @@ def test_get_marital_status(mock_post):
     ) == data, "should return an object"
 
 
-@patch('requests.post')
-def test_wallet_balance(mock_post):
-    data = responses['WalletBalance']
-    mock_post.return_value = R(data)
-    assert Wallet(header).WalletBalance() == data, "should return an object"
+# @patch('requests.post')
+# def test_wallet_balance(mock_post):
+#     data = responses['WalletBalance']
+#     mock_post.return_value = R(data)
+#     assert Wallet(header).WalletBalance() == data, "should return an object"
 
 
 @patch('requests.post')
