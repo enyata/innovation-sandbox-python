@@ -38,23 +38,23 @@ def test_transfer(mock_post):
 @patch.object(Session, 'request')
 def test_mobile_wallet_transfer(mock_post):
     data = responses["mobile_wallet_transfer"]
-    mock_post.return_value = data
+    mock_post.return_value = R(data)
     assert Account(header).MobileWalletRequest(mobile_wallet_transfer_body) == data, "should return an object"
 
 @patch.object(Session, 'request')
 def test_bill_payment_advice(mock_post):
     data = responses["bill_payment_advice"]
-    mock_post.return_value = ""
+    mock_post.return_value = R(data)
     assert Billpayment(header).BillPaymentAdvice() == data, "should return an object"
 
 @patch.object(Session, 'request')
 def test_biller_payment_items(mock_get):
     data = responses["biller_payment_items"]
-    mock_get.return_value = data
+    mock_get.return_value = R(data)
     assert Billpayment(biller).BillerPaymentItems(get_biller_query) == data, "should return an object"
 
 @patch.object(Session, 'request')
 def test_biller_isw(mock_get):
     data = responses["test_biller_isw"]
-    mock_get.return_value = data
+    mock_get.return_value = R(data)
     assert Billpayment(biller).BillersISW(get_biller_query) == data, "should return an object"
