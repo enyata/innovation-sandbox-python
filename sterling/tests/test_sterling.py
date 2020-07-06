@@ -1,7 +1,7 @@
 import unittest
 from requests import Session
 from unittest.mock import Mock, patch
-from sterling.billpayment import Billpayment
+from sterling.BillPayment import Billpayment
 from sterling.tests.common import responses, body, query,mobile_wallet_transfer_body, get_biller_query, R
 from sterling.account import Account
 from sterling.transfer import Transfer
