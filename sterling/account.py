@@ -10,5 +10,13 @@ class Account(Sterling):
         url = urljoin(BASE_URL(self.url),
                       "/sterling/accountapi/api/Spay/InterbankTransferReq")
         header = self.headers
-        apiResponse = calls("post", url, None, json.dumps(body), header)
-        return (apiResponse)
+        api_response = calls("post", url, None, json.dumps(body), header)
+        return (api_response)
+    
+    def MobileWalletRequest(self, body):
+        url = urljoin(BASE_URL(self.url),
+                      "/sterling/accountapi/api/Spay/SBPMWalletRequest"
+                      )
+        header = self.headers
+        api_response = calls("post", url, None, json.dumps(body), header)
+        return (api_response)

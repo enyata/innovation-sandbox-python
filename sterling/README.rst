@@ -133,7 +133,7 @@ another.
 options
 ~~~~~~~
 
-The module accepts options as array of key-value.
+The module accepts options as objects of key-value.
 
 payload
 ^^^^^^^
@@ -220,3 +220,275 @@ example,
 
     print(result)
 
+Mobile Wallet Request([options])
+-----------------------------
+Want to perform wallet transactions? It works best with our Mobile Wallet API.
+
+options
+~~~~~~~
+
+The module accepts options as array of key-value.
+
+
+Referenceid
+'''''''''''
+
+This is the unique number that identifies transactions/request.
+
+RequestType
+'''''''''''
+
+The is the type of request being processed.
+
+Translocation
+'''''''''''
+
+GPS of the originating location of the transaction in longitude & latitude.
+
+Amount (amt)
+''''''
+
+This is the amount sent.
+
+TellerId (tellerid)
+''''''''
+
+FromAccount (frmacct)
+'''''''''''
+
+This is the NUBAN of the transaction sender account.
+
+ToAccount (toacct)
+'''''''''
+
+This is the NUBAN of the transaction recipient account.
+
+ExpCode (exp_code)
+'''''''
+
+PaymentReference (paymentRef)
+''''''''''''''''
+
+A unique identifier for the transaction.
+
+
+Remark (remarks)
+''''''
+
+This is a remark that describes the purpose of the transaction.
+
+MobileWalletRequest(credentials)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The credentials stated above will be passed as a body parameter. The
+body parameter is passed as an argument to the named enquiry method. For
+example,
+
+.. code:: python3
+
+    from sterling.account import Account
+    body = {
+        "Referenceid": "01",
+    "RequestType": "0",
+    "Translocation": "01",
+    "amt": "2000",
+    "tellerid": "01",
+    "frmacct": "0051561375",
+    "toacct": "0037514056",
+    "exp_code": "01",
+    "paymentRef": "01",
+    "remarks": "Monthly subscription"
+    }
+
+    result = Account(header).MobileWalletRequest(body)
+
+    print(result)
+
+Bill Payment Advice([options])
+-----------------------------
+This provides the list of all billing services available to a particular billing company.
+
+options
+~~~~~~~
+
+The module accepts options as array of key-value.
+
+
+Referenceid
+'''''''''''
+
+This is the unique number that identifies transactions/request.
+
+RequestType
+'''''''''''
+
+The is the type of request being processed.
+
+Translocation
+'''''''''''
+
+GPS of the originating location of the transaction in longitude & latitude.
+
+Amount (amt)
+''''''
+
+This is the amount to be billed.
+
+PaymentCode (paymentcode)
+'''''''''''
+
+This is the specific code for the particular bill service payment.
+
+Mobile (mobile)
+'''''''''''
+
+The account number of the user.
+
+SubscriberInformation (SubscriberInfo1)
+'''''''''
+
+ActionType (exp_code)
+'''''''
+
+Nuban (nuban)
+''''''''''''''''
+
+A unique identifier for the transaction.
+
+
+Email (remarks)
+''''''
+
+The email address of the user.
+
+
+BillPaymentAdvice(credentials)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The credentials stated above will be passed as a body parameter. The
+body parameter is passed as an argument to the named enquiry method. For
+example,
+
+.. code:: python3
+
+    from sterling.account import Account
+    body = {
+    "Referenceid": "01",
+    "RequestType": "0",
+    "Translocation": "01",
+    "amt": "2000",
+    "paymentcode": "01",
+    "mobile": "0051561375",
+    "SubscriberInfo1": "0037514056",
+    "ActionType": "01",
+    "nuban": "0037514056",
+    "email": "sender@gmail.com"
+    }
+
+    result = Account(header).BillPaymentAdvice(body)
+
+    print(result)
+
+Biller Payment Items([options])
+-----------------------------
+This provides the list of all billing services available to a particular billing company.
+
+options
+~~~~~~~
+
+The module accepts options as array of key-value.
+
+
+Referenceid
+'''''''''''
+
+This is the unique number that identifies transactions/request.
+
+RequestType
+'''''''''''
+
+The is the type of request being processed.
+
+Translocation
+'''''''''''
+
+GPS of the originating location of the transaction in longitude & latitude.
+
+BillerId (billerid)
+''''''
+This is the identity of the biller service.
+
+BvN (Bvn)
+'''
+
+BillerPaymentItems(credentials)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The credentials stated above will be passed as a body parameter. The
+body parameter is passed as an argument to the named enquiry method. For
+example,
+
+.. code:: python3
+
+    from sterling.account import Account
+    body = {
+    "Referenceid": "01",
+    "RequestType": "0",
+    "Translocation": "01",
+    "billerid":"002",
+    "Bvn": "2098765428"
+    }
+
+    result = Account(header).BillerPaymentItems(body)
+
+    print(result)
+
+Billers ISW([options])
+-----------------------------
+This provides the list of all billing services available.
+
+options
+~~~~~~~
+
+The module accepts options as array of key-value.
+
+
+Referenceid
+'''''''''''
+
+This is the unique number that identifies transactions/request.
+
+RequestType
+'''''''''''
+
+The is the identifier of the request being processed.
+
+Translocation
+'''''''''''
+
+GPS of the originating location of the transaction in longitude & latitude.
+
+BvN (Bvn)
+'''
+
+BillersISW(credentials)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The credentials stated above will be passed as a body parameter. The
+body parameter is passed as an argument to the named enquiry method. For
+example,
+
+.. code:: python3
+
+    from sterling.account import Account
+    body = {
+    "Referenceid": "01",
+    "RequestType": "0",
+    "Translocation": "01",
+    "billerid":"002",
+    "Bvn": "2098765428"
+    }
+
+    result = Account(header).BillersISW(body)
+
+    print(result)
