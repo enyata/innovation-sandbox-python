@@ -35,7 +35,7 @@ setup(
         'requests',
         'Sphinx',
         'urljoin==1.0.0',
-        'urllib3==1.25.7',
+        'urllib3==1.26.5',
         'setuptools',
         'wheel',
         'faker==4.0.0'
